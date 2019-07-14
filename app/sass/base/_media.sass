@@ -1,0 +1,133 @@
+@import vars
+
+
+/*==========  Desktop First  ==========*/
+
+// ≥1200px
++media-breakpoint-down(lg)
+
+  .parallax
+    display: none
+
+  .chars-wrap
+    flex-wrap: wrap
+  .char-item
+    width: calc(33% - 8px)
+    margin-bottom: 30px
+
+  .header-top
+    &-text
+      h1
+        display: block
+
+  .main-mnu
+    display: none
+  .hamburger
+    display: inline-block
+  .socials
+    position: relative
+    top: 3px
+
+// ≥992px
++media-breakpoint-down(md)
+
+  .char-item
+    width: calc(50% - 8px)
+    margin-right: 0
+
+  .header-middle
+    text-align: center
+  .timer
+    margin-left: auto
+    margin-right: auto
+    margin-bottom: 45px
+  .timer-label
+    margin-top: 25px
+
+  .header-top
+    &-text
+      font-size: 16px
+
+  .header-recall .phone
+    font-size: 25px
+    margin-bottom: 10px
+
+  .header-recall
+    margin-left: 10px
+
+// ≥768px
++media-breakpoint-down(sm)
+
+
+
+  .header-top
+    .container
+      flex-wrap: wrap
+      justify-content: space-between
+
+  .header-recall
+    width: 100%
+    text-align: center
+    margin-top: 40px
+
+// ≥480px
++media-breakpoint-down(xs)
+
+  .char-item
+    width: 100%
+    margin-right: 0
+    text-align: center
+    flex-direction: column
+    .svg
+      margin-bottom: 8px
+
+  .timer
+    padding-left: 3px
+    padding-right: 3px
+    width: 296px
+    position: relative
+    left: -3px
+
+
+  .quest
+    font-size: 12px
+    .btn
+      font-size: 10px
+      width: auto
+    h3
+      font-size: 16px
+
+  .header-middle
+    padding-top: 30px
+    h2
+      font-size: 22px
+      font-weight: 600
+    h1
+      font-size: 26px
+
+  .header-top
+    .container
+      flex-direction: column
+      text-align: center
+    .logo
+      margin-right: 0
+      margin-bottom: 20px
+
+  .header-recall
+    .btn
+      margin-top: 10px
+
+
+/*==========  Mobile First  ==========*/
+
+// ≤480px
++media-breakpoint-up(sm)
+
+// ≤768px
++media-breakpoint-up(md)
+
+// ≤992px
++media-breakpoint-up(lg)
+
+// ≤1200px
++media-breakpoint-up(xl)

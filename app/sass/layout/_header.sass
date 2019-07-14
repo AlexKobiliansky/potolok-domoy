@@ -1,0 +1,249 @@
+.main-head
+  background-image: url('../img/bg-header.png')
+  +bg-cover
+
+.top-line
+  border-bottom: 2px solid #dfdede
+  position: fixed
+  left: 0
+  top: 0
+  width: 100%
+  background-color: transparent
+  z-index: 200
+  .container
+    display: flex
+    justify-content: space-between
+    align-items: center
+  &.sticky
+    background-color: #fff
+
+
+
+.soc-item
+  display: inline-block
+  width: 22px
+  margin-left: 3px
+  +mt(.3s)
+
+.main-mnu
+  position: relative
+  padding-left: 48px
+  font-size: 0
+  &:before
+    content: ''
+    position: absolute
+    left: 0
+    top: calc(50% - 13.5px)
+    width: 26px
+    height: 27px
+    background-image: url('../img/icons/home-icon.svg')
+    +bg-cover
+  li
+    display: inline-block
+    a
+      display: inline-block
+      line-height: 1
+      padding: 20px 16px
+      +mt(.3s)
+      background-color: transparent
+      font-size: 14px
+      color: $text
+      &:hover
+        color: #fff
+        background-color: $accent
+
+.hamburger
+  position: relative
+  padding-left: 48px
+  top: 3px
+  display: none
+  &:before
+    content: ''
+    position: absolute
+    left: 0
+    top: calc(50% - 18px)
+    width: 26px
+    height: 27px
+    background-image: url('../img/icons/home-icon.svg')
+    +bg-cover
+  &:hover
+    .hamburger-inner, .hamburger-inner:after, .hamburger-inner:before
+      background-color: $accent
+.hamburger-inner, .hamburger-inner:after, .hamburger-inner:before
+  transition: all .3s ease!important
+  height: 3px
+  width: 35px
+
+.hamburger-inner:after
+  bottom: -8px
+.hamburger-inner:before
+  top: -8px
+
+
+//mmenu customization start
+.mm-menu_theme-dark
+  background-color: #f4f4f4
+  text-transform: uppercase
+
+.mm-logo
+  display: block
+  margin: 0 auto
+  transform: scaleY(1.1)
+
+.mm-navbars_top
+  border-color: transparent
+
+.mm-listitem, .mm-listitem .mm-btn_next, .mm-listitem .mm-btn_next:before, .mm-listview
+  border-color: red
+
+.mm-listitem:after
+  width: 0
+  +mt(.3s)
+  border-bottom-width: 2px
+
+.mm-listitem
+
+  a:not(.mm-btn_next)
+    padding-top: 14px
+    padding-bottom: 12px
+    color: $text
+    +mt(.3s)
+  &:hover
+    a
+      color: $accent
+    &:after
+      width: 80%
+
+.mm-navbar
+  border: none
+
+
+.mm-menu_theme-dark .mm-navbar a, .mm-menu_theme-dark .mm-navbar>*
+  font-size: 20px
+  color: #fff
+  letter-spacing: 2px
+//mmenu customization end
+
+.header-top
+  padding: 71px 0 15px
+  .container
+    display: flex
+    align-items: center
+  .logo
+    margin-right: 20px
+  &-text
+    font-size: 23px
+    font-weight: 600
+    h1
+      font-weight: 800
+      display: inline-block
+
+.header-recall
+  flex-grow: 2
+  text-align: right
+  .phone
+    font-size: 30px
+    font-weight: 600
+    color: $text
+    +mt(.3s)
+    line-height: 1
+    margin-bottom: 17px
+    display: inline-block
+    &:hover
+      color: $accent
+  .btn-block
+    font-size: 13px
+    text-transform: uppercase
+  .btn
+    font-weight: 700
+    font-size: 14px
+    padding-left: 23px
+    padding-right: 23px
+    margin-top: 5px
+    padding-top: 12px
+    padding-bottom: 12px
+
+
+.header-middle
+  padding-top: 45px
+  margin-bottom: 40px
+  h2
+    font-size: 36px
+    line-height: 1
+  h1
+    font-size: 36px
+    text-transform: uppercase
+    color: $accent
+    text-shadow: 0 2px #921d1d
+  .container
+    position: relative
+
+.cube-1
+  position: absolute
+  left: 336px
+  top: 66px
+
+.cube-2
+  position: absolute
+  left: 395px
+  top: 57px
+
+.cube-3
+  position: absolute
+  left: 220px
+  top: 86px
+
+.cube-4
+  position: absolute
+  left: 390px
+  top: 142px
+
+
+.quest
+  background-image: url('../img/bg-popup.png')
+  +bg-cover
+  background-color: #fff
+  padding: 55px 15px 65px 15px
+  text-align: center
+  height: 385px
+  display: flex
+  flex-direction: column
+  justify-content: space-between
+  border-radius: 10px
+  box-shadow: 0 0 25px 5px rgba(#000, .2)
+  align-items: center
+  h3
+    font-size: 23px
+  .btn
+    width: 350px
+
+.timer-label
+  font-size: 14px
+  line-height: 1
+  margin-top: 45px
+  margin-left: 10px
+
+
+.header-bottom
+  padding-top: 40px
+
+.chars-wrap
+  display: flex
+  justify-content: space-between
+
+.char-item
+  display: flex
+  margin-right: 8px
+  font-size: 18px
+  font-weight: 600
+  align-items: center
+  .svg
+    +mt(.3s)
+    fill: $accent
+    height: 55px
+    width: auto
+    margin-right: 8px
+  &:last-child
+    margin-right: 0
+
+
