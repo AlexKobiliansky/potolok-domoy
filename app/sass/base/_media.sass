@@ -6,6 +6,13 @@
 // ≥1200px
 +media-breakpoint-down(lg)
 
+  .stage-item
+    height: 290px
+    font-size: 16px
+    &:after
+      transform: scale(.7)
+      top: 16px
+
   .parallax
     display: none
 
@@ -30,6 +37,21 @@
 
 // ≥992px
 +media-breakpoint-down(md)
+
+  .stage-item-container
+    &:nth-child(3n)
+      .stage-item:after
+        display: block
+    &:nth-child(2n)
+      .stage-item:after
+        display: none
+
+
+
+  .stage-item
+    height: 330px
+    &:after
+      transform: scale(.8)
 
   .char-item
     width: calc(50% - 8px)
@@ -58,7 +80,22 @@
 // ≥768px
 +media-breakpoint-down(sm)
 
+  .section-title
+    font-size: 26px
 
+  section
+    padding-top: 50px
+
+  .s-bg:before
+    top: 65px
+
+  .stage-item
+    height: 240px
+    font-size: 14px
+    .svg
+      margin-bottom: 15px
+    &:after
+      top: -13px
 
   .header-top
     .container
@@ -72,6 +109,22 @@
 
 // ≥480px
 +media-breakpoint-down(xs)
+
+  .stages-wrap
+    margin-top: 40px
+
+  .stage-item
+    width: 290px
+    height: 290px
+    margin-left: auto
+    margin-right: auto
+    border-width: 5px
+    &:after
+      display: none
+
+  .stage-item-container:nth-child(3n) .stage-item:after
+    display: none
+
 
   .char-item
     width: 100%

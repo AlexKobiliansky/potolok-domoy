@@ -222,6 +222,35 @@ h1, h2
   position: absolute
   z-index: 100
 
+section
+  padding-top: 100px
+
+.section-title
+  font-weight: 800
+  font-size: 40px
+  text-transform: uppercase
+  margin-bottom: 15px
+  text-align: center
+  span
+    color: $accent
+
+.s-bg
+  position: relative
+  .container
+    position: relative
+    z-index: 3
+  &:before
+    content: ''
+    position: absolute
+    left: 0
+    top: 115px
+    width: 99.8%
+    height: 96%
+    background-color: #f4f4f4
+    transform: skewX(-5deg) rotate(-5deg)
+    z-index: -1
+
+
 
 
 
