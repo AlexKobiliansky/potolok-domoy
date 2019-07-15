@@ -75,6 +75,8 @@ h1, h2
   font-size: 14px
   padding: 15px 20px
   text-align: center
+  cursor: pointer
+
 
 .btn-green, .btn-green:active, .btn-green:focus
   background-image: linear-gradient(to bottom,  #1d9a20 50%,  #1f611f 100%)
@@ -254,6 +256,56 @@ section
     transform: skewX(-5deg) rotate(-5deg)
     z-index: -1
 
+
+//forms
+form
+  label
+    display: block
+    margin-bottom: 15px
+    input
+      width: 100%
+      font-size: 14px
+      line-height: 1
+      background-color: #fff
+      border: 1px solid #999ead
+      border-radius: 5px
+      padding: 7px 9px
+      &::placeholder
+        color: #b3b2b2
+      &.error
+        border-color: red!important
+        color: red
+        &::placeholder
+          color: red
+    &.label-phone
+      input
+        display: inline-block
+        width: calc(100% - 66px)
+    span
+      display: block
+      font-size: 9px
+      text-align: left
+      margin-bottom: 6px
+  .btn
+    margin-top: 25px
+    display: block
+    width: 100%
+    border: none
+    font-size: 21px
+    font-weight: 600
+  .form-error
+    display: none
+
+.phone-code
+  display: inline-block
+  font-size: 14px
+  background-color: #fff
+  border: 1px solid #999ead
+  border-radius: 5px
+  padding: 7px 9px
+  width: 50px
+  margin-right: 10px
+  text-align: center
 
 
 

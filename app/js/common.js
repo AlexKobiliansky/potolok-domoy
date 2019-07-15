@@ -203,8 +203,21 @@ $(document).ready(function(){
     });
 
 
+    //*** FORMS ***//
+    var uPhone = $('.user-phone');
+    uPhone.mask("(999) 999-99-99",{autoclear: false});
 
-    //E-mail Ajax Send
+    uPhone.on('click', function (ele) {
+        var needelem = ele.target || event.srcElement;
+        needelem.setSelectionRange(1,1);
+        needelem.focus();
+    });
+
+    $.validate({
+        form : '.contact-form',
+        scrollToTopOnError: false
+    });
+
     $("form").submit(function() { //Change
         var th = $(this);
 
@@ -217,4 +230,5 @@ $(document).ready(function(){
         });
         return false;
     });
+    //** END FORMS **//
 });
