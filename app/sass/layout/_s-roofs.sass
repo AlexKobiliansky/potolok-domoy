@@ -1,0 +1,57 @@
+.roofs-wrap
+  margin-top: 45px
+
+.roof-item
+  padding: 11px 11px 30px
+  box-shadow: 0 0 15px 3px rgba(#000, .1)
+  &-img
+    height: 208px
+    +bg-cover
+    margin-bottom: 30px
+  &-title
+    font-size: 16px
+    text-transform: uppercase
+    font-weight: 600
+    margin-bottom: 15px
+  .price-item
+    font-weight: 300
+    display: flex
+    justify-content: space-between
+    margin-bottom: 8px
+    .price
+      color: $accent
+      white-space: nowrap
+      padding-left: 5px
+  &-prices
+    margin-bottom: 35px
+  &-bottom
+    display: flex
+    justify-content: space-between
+    .total
+      margin-right: 20px
+      background-color: $accent
+      color: #fff
+      border-radius: 8px
+      flex-grow: 1
+      line-height: 1
+      padding: 8px 15px 6px
+      span
+        font-size: 24px
+        display: block
+
+.btn-roof
+  background-color: #fff
+  border: 2px solid #fcd811
+  border-radius: 8px
+  color: #faa41a
+  font-weight: 600
+  line-height: 1
+  display: flex
+  align-items: center
+  justify-content: center
+  +mt(0s)
+  &:hover
+    background-image: linear-gradient(to bottom,  #1d9a20 50%,  #1f611f 100%)
+    color: #fff
+    text-decoration: underline
+    border-color: transparent

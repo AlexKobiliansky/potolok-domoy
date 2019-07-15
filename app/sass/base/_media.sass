@@ -6,6 +6,16 @@
 // ≥1200px
 +media-breakpoint-down(lg)
 
+  .roof-item-prices
+    font-size: 13px
+
+  .roof-item-bottom
+    flex-direction: column
+    .total
+      margin-right: 0
+      margin-bottom: 10px
+      text-align: center
+
   .stage-item
     height: 290px
     font-size: 16px
@@ -38,6 +48,18 @@
 // ≥992px
 +media-breakpoint-down(md)
 
+  .roof-item
+    margin-bottom: 30px
+    &-img
+      height: 400px
+    &-bottom
+      flex-direction: row
+      .total
+        margin-bottom: 0
+        flex-grow: unset
+        width: 160px
+
+.btn-roof
   .choose-img
     margin-bottom: 30px
 
@@ -89,6 +111,10 @@
 // ≥768px
 +media-breakpoint-down(sm)
 
+  .roof-item
+    &-img
+      height: 300px
+
   .section-title
     font-size: 26px
 
@@ -118,6 +144,18 @@
 
 // ≥480px
 +media-breakpoint-down(xs)
+
+  .roof-item
+    &-img
+      height: 200px
+    &-bottom
+      flex-direction: column
+      .total
+        width: 100%
+        margin-bottom: 10px
+
+  .section-title
+    font-size: 22px
 
   .choose-item
     .btn

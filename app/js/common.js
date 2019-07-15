@@ -90,7 +90,8 @@ $(document).ready(function(){
     //*** equal heights ***//
     function heightses() {
         if ($(window).width()>992) {
-
+            $('.roof-item-title').height('auto').equalHeights();
+            $('.roof-item-prices').height('auto').equalHeights();
         }
         $('.choose-li-desc').height('auto').equalHeights();
     }
