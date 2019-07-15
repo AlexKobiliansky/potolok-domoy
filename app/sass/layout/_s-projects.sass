@@ -1,0 +1,46 @@
+.projects
+  //position: relative
+  //display: flex
+  flex-wrap: wrap
+  justify-content: center
+  margin-top: 10px
+  font-size: 0
+
+.projects-wrap
+  margin-top: 20px
+  button
+    background-color: #fff
+    box-shadow: none
+    font-size: 13px
+    font-weight: 700
+    +mt(.3s)
+    color: #999ead
+    border: 2px solid #999ead
+    line-height: 1
+    padding: 12px 10px
+    border-radius: 5px
+    margin: 0 9px 20px
+    cursor: pointer
+    &.active
+      color: #fff
+      background-color: #999ead
+      &:hover
+        color: #fff
+        background-color: #999ead
+        border-color: #999aed
+    &:hover
+      color: $accent
+      border-color: $accent
+
+.projects-row
+  display: flex
+  justify-content: center
+  flex-wrap: wrap
+
+.project-img
+  width: calc(15.75%)
+  margin-right: 12.5px
+  margin-bottom: 15px
+  font-size: 0
+  &:nth-child(6n)
+    margin-right: 0

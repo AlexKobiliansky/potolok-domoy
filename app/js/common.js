@@ -104,6 +104,23 @@ $(document).ready(function(){
 
 
     $('.choose-img').photoswipe();
+    $('.project-img').photoswipe();
+
+    var $isotope = $('.projects').isotope({
+        itemSelector: '.project-img',
+        layoutMode: 'fitRows'
+    });
+
+    // filter items on button click
+    $('.filter-button-group').on( 'click', 'button', function() {
+        $(this).parents('.projects-row').siblings('.projects-row').find('button').removeClass('active');
+        $(this).siblings('button').removeClass('active');
+        $(this).addClass('active');
+
+
+        var filterValue = $(this).attr('data-filter');
+        $isotope.isotope({ filter: filterValue });
+    });
 
     if ($(window).width()>992) {
         $("#sol-slider").waterwheelCarousel({

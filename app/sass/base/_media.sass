@@ -6,6 +6,14 @@
 // ≥1200px
 +media-breakpoint-down(lg)
 
+  .project-img
+    margin-right: 10px
+    width: calc(20% - 8px)
+    &:nth-child(6n)
+      margin-right: 10px
+    &:nth-child(5n)
+      margin-right: 0
+
   .roof-item-prices
     font-size: 13px
 
@@ -47,6 +55,10 @@
 
 // ≥992px
 +media-breakpoint-down(md)
+
+  .projects-wrap
+    button
+      margin: 0 3px 10px
 
   .sol-slider
     height: 330px
@@ -121,6 +133,17 @@
 // ≥768px
 +media-breakpoint-down(sm)
 
+  .projects-wrap
+    button
+      font-size: 12px
+
+  .project-img
+    width: calc(25% - 8px)
+    &:nth-child(5n)
+      margin-right: 10px
+    &:nth-child(4n)
+      margin-right: 0
+
   .sol-slider
     height: 250px
     margin-top: 50px
@@ -167,6 +190,18 @@
 
 // ≥480px
 +media-breakpoint-down(xs)
+
+  .projects-wrap
+    button
+      padding: 9px 10px
+      font-size: 10px
+
+  .project-img
+    width: calc(33% - 7px)
+    &:nth-child(4n)
+      margin-right: 10px
+    &:nth-child(3n)
+      margin-right: 0
 
   .sol-wrap
     margin-top: 50px
