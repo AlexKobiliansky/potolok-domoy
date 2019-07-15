@@ -1,0 +1,58 @@
+.s-faq
+
+.faq-title
+  font-weight: 800
+  text-align: center
+  font-size: 24px
+  line-height: 1
+  margin-bottom: 45px
+  text-transform: uppercase
+
+.faq-wrap
+  margin-bottom: 55px
+
+.faq-item
+  font-size: 14px
+  margin-bottom: 10px
+  &-quest
+    +mt(.3s)
+    background-color: $accent-grey
+    padding: 18px 8px 18px 48px
+    position: relative
+    border: 2px solid #fcd811
+    border-radius: 10px
+    cursor: pointer
+    &:before
+      content: ''
+      position: absolute
+      background-color: #000
+      width: 16px
+      height: 2px
+      left: 18px
+      top: calc(50% - 1px)
+    &:after
+      content: ''
+      position: absolute
+      background-color: #000
+      width: 2px
+      height: 16px
+      left: 25px
+      top: calc(50% - 8px)
+  &-ans
+    background-color: $accent-grey
+    border: 2px solid #fcd811
+    border-radius: 10px
+    padding: 20px 17px 30px
+    border-top-left-radius: 0
+    border-top-right-radius: 0
+    display: none
+    border-top: none
+    position: relative
+    top: -7px
+  &.active
+    .faq-item-quest
+      background-color: #fcd811
+      border-bottom-left-radius: 0
+      border-bottom-right-radius: 0
+      &:after
+        display: none
