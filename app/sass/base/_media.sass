@@ -38,6 +38,15 @@
 // ≥992px
 +media-breakpoint-down(md)
 
+  .choose-img
+    margin-bottom: 30px
+
+  .choose-tabs
+    ul
+      flex-wrap: wrap
+    li
+      width: 25%
+
   .stage-item-container
     &:nth-child(3n)
       .stage-item:after
@@ -109,6 +118,22 @@
 
 // ≥480px
 +media-breakpoint-down(xs)
+
+  .choose-item
+    .btn
+      font-size: 16px
+    .btn-wrap
+      text-align: center
+
+  .choose-tabs
+    ul
+      justify-content: flex-start
+    li
+      width: 33%
+      flex-grow: unset
+
+  .section-text
+    font-size: 16px
 
   .stages-wrap
     margin-top: 40px

@@ -1,0 +1,93 @@
+.s-choose
+  padding-top: 50px
+
+.choose-tabs
+  margin-top: 45px
+  ul
+    display: flex
+    justify-content: space-between
+  li
+    flex-grow: 1
+    .svg
+      +mt(.3s)
+      fill: #ffc500
+      height: 49px
+      width: auto
+      margin-bottom: 10px
+    a
+      display: flex
+      flex-direction: column
+      text-align: center
+      justify-content: center
+      align-items: center
+      +mt(.3s)
+      font-size: 14px
+      font-weight: 600
+      color: #000
+      padding: 11px
+      &:hover
+        background-color: $accent-grey
+        color: $accent
+        .svg
+          fill: $accent
+    &.ui-tabs-active
+      a
+        background-color: $accent-grey
+        color: $accent
+        .svg
+          fill: $accent
+
+.choose-contents-wrap
+  background-color: $accent-grey
+
+.choose-tab-content
+  padding: 40px 0 60px
+
+.choose-item
+  ul.choose-item-list
+    display: block
+    font-size: 16px
+    margin-bottom: 20px
+  li
+    display: block
+    width: 100%!important
+    position: relative
+    line-height: 1.2
+    margin-bottom: 10px
+    padding-left: 26px
+    &:before
+      content: ''
+      position: absolute
+      width: 6px
+      height: 6px
+      border-radius: 50%
+      background-color: #000
+      left: 0
+      top: 7px
+  &-title
+    font-size: 24px
+    text-transform: uppercase
+    color: $accent
+    margin-bottom: 18px
+  &-bottom
+    display: flex
+    span
+      width: 50%
+      font-size: 24px
+    .price
+      display: inline-block
+      text-align: center
+    .new
+      font-size: 24px
+      font-weight: 700
+      color: $accent
+    .old
+      font-size: 16px
+      font-weight: 300
+      text-decoration: line-through
+  .btn
+    margin-top: 35px
+    font-size: 21px
+
+
+

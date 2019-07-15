@@ -65,6 +65,7 @@ $(document).ready(function(){
      * end STICKY NAV
      */
 
+    //*** Timer ***//
     var timer = $('.timer').FlipClock({
         clockFace: "DailyCounter",
         countdown: true,
@@ -78,7 +79,30 @@ $(document).ready(function(){
 
     timer.setTime(remain);
     timer.start();
+    //*** end Timer ***//
 
+
+    //*** tabs ***//
+    $( ".tabs" ).tabs();
+    //*** end tabs ***//
+
+
+    //*** equal heights ***//
+    function heightses() {
+        if ($(window).width()>992) {
+
+        }
+        $('.choose-li-desc').height('auto').equalHeights();
+    }
+
+    $(window).resize(function() {
+        heightses();
+    });
+    heightses();
+    //*** end equal heights ***//
+
+
+    $('.choose-img').photoswipe();
 
 
     $('img.svg').each(function(){
