@@ -105,6 +105,31 @@ $(document).ready(function(){
 
     $('.choose-img').photoswipe();
 
+    if ($(window).width()>992) {
+        $("#sol-slider").waterwheelCarousel({
+            separation: 230,
+            opacityMultiplier: 1
+        });
+    }
+
+
+    if ($(window).width()<480) {
+        $("#sol-slider").waterwheelCarousel({
+            separation: 90,
+            opacityMultiplier: 1,
+            flankingItems: 1
+        });
+    }
+
+    if ($(window).width()<=768) {
+        $("#sol-slider").waterwheelCarousel({
+            separation: 100,
+            opacityMultiplier: 1,
+            flankingItems: 3
+        });
+    }
+
+
 
     $('img.svg').each(function(){
         var $img = jQuery(this);

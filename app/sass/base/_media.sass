@@ -48,6 +48,16 @@
 // ≥992px
 +media-breakpoint-down(md)
 
+  .sol-slider
+    height: 330px
+    img
+      width: 250px
+
+
+  .sol-item
+    padding-left: 5px
+    padding-right: 5px
+
   .roof-item
     margin-bottom: 30px
     &-img
@@ -59,9 +69,9 @@
         flex-grow: unset
         width: 160px
 
-.btn-roof
-  .choose-img
-    margin-bottom: 30px
+  .btn-roof
+    .choose-img
+      margin-bottom: 30px
 
   .choose-tabs
     ul
@@ -111,6 +121,19 @@
 // ≥768px
 +media-breakpoint-down(sm)
 
+  .sol-slider
+    height: 250px
+    margin-top: 50px
+    img
+      width: 250px
+
+  .sol-wrap
+    flex-wrap: wrap
+  .sol-item
+    padding: 0
+    width: 50%
+    margin-bottom: 40px
+
   .roof-item
     &-img
       height: 300px
@@ -144,6 +167,18 @@
 
 // ≥480px
 +media-breakpoint-down(xs)
+
+  .sol-wrap
+    margin-top: 50px
+
+  .sol-slider
+    height: 200px
+    margin-top: 30px
+    img
+      width: 200px
+
+  .sol-item
+    width: 100%
 
   .roof-item
     &-img
