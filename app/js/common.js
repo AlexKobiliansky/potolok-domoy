@@ -312,7 +312,7 @@ $(document).ready(function(){
     //** END FORMS **//
 
 
-    
+
     /**
      * YA-MAPS
      */
