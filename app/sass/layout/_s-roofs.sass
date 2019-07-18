@@ -1,5 +1,5 @@
 .roofs-wrap
-  margin-top: 45px
+  margin-top: 25px
 
 .roof-item
   padding: 11px 11px 30px
@@ -55,3 +55,32 @@
     color: #fff
     text-decoration: underline
     border-color: transparent
+
+.roofs-slider
+  .owl-nav
+    position: absolute
+    top: 180px
+    width: 100%
+    button.owl-prev, button.owl-next
+      height: 68px
+      width: 68px
+      background-color: #fff
+      border-radius: 50%
+      background-image: url('../img/icons/slider-arrow.png')
+      background-repeat: no-repeat
+      background-position: center center
+      background-size: 41px 41px
+      +mt(.3s)
+      opacity: .6
+      cursor: pointer
+      position: absolute
+      box-shadow: 0 0 10px 4px rgba(#000, .15)
+      &:hover
+        opacity: .8
+    button.owl-prev
+      transform: rotate(180deg)
+      left: 17px
+    button.owl-next
+      right: 17px
+  .owl-stage-outer
+    padding: 20px 0

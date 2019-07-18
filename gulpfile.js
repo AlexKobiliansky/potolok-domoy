@@ -51,6 +51,13 @@ gulp.task('scripts', function() {
 		'app/libs/isotope/isotope.min.js',
 		'app/libs/inputmask/jquery.maskedinput.min.js',
 		'app/libs/jquery-form-validator/form-validator/jquery.form-validator.min.js',
+        'app/libs/magnificPopup/jquery.magnific-popup.min.js',
+		'app/libs/swiper/swiper.min.js',
+		'app/libs/owl-carousel/owl.carousel.min.js',
+		'app/libs/owl-carousel/owl-scrollbar.js',
+		'app/libs/wow/wow.min.js',
+		'app/libs/formstyler/jquery.formstyler.min.js',
+		'app/libs/page-scroll-to-id/jquery.malihu.PageScroll2id.js',
 		'app/js/common.js', // Always at the end
 		])
 	.pipe(concat('scripts.min.js'))

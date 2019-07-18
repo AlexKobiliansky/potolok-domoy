@@ -1,3 +1,7 @@
+$(window).on('beforeunload', function() {
+    $(window).scrollTop(0);
+});
+
 $(document).ready(function(){
 
     /**
@@ -45,6 +49,7 @@ $(document).ready(function(){
      * end mobile-mnu customization
      */
 
+    $(".main-mnu a").mPageScroll2id();
 
     /**
      * STICKY NAV
@@ -79,12 +84,38 @@ $(document).ready(function(){
 
     timer.setTime(remain);
     timer.start();
+
+    $(".timer").click(function() {
+        $('html,body').animate({scrollTop: $('#s-sales').offset().top});
+    });
+
     //*** end Timer ***//
 
 
     //*** tabs ***//
     $( ".tabs" ).tabs();
     //*** end tabs ***//
+
+
+    $('.roofs-slider').owlCarousel({
+        loop:true,
+        nav: true,
+        items: 3,
+        margin: 30,
+        dots: false,
+        navText: ["",""],
+        responsive: {
+            0: {
+                items: 1
+            },
+            768: {
+                items: 2
+            },
+            992: {
+                items: 3
+            }
+        }
+    });
 
 
     //*** equal heights ***//
@@ -95,6 +126,13 @@ $(document).ready(function(){
             $('.faq-title').height('auto').equalHeights();
         }
         $('.choose-li-desc').height('auto').equalHeights();
+
+
+        $('.kwiz-slide-underdesc').height('auto').equalHeights();
+        $('.kwiz-slide-desc').height('auto').equalHeights();
+        $('.kwiz-quest').height('auto').equalHeights();
+
+        $('.project-img img').height('auto').equalHeights();
     }
 
     $(window).resize(function() {
@@ -124,28 +162,36 @@ $(document).ready(function(){
     });
 
     if ($(window).width()>992) {
-        $("#sol-slider").waterwheelCarousel({
+        var solSlider = $("#sol-slider").waterwheelCarousel({
             separation: 230,
             opacityMultiplier: 1
         });
     }
 
 
-    if ($(window).width()<480) {
-        $("#sol-slider").waterwheelCarousel({
+    if ($(window).width()<=480) {
+        var solSlider = $("#sol-slider").waterwheelCarousel({
             separation: 90,
             opacityMultiplier: 1,
             flankingItems: 1
         });
     }
 
-    if ($(window).width()<=768) {
-        $("#sol-slider").waterwheelCarousel({
+    if (($(window).width()<=992) && ($(window).width()>480)) {
+        var solSlider = $("#sol-slider").waterwheelCarousel({
             separation: 100,
             opacityMultiplier: 1,
             flankingItems: 3
         });
     }
+
+    $('.sol-prev').click(function(){
+       solSlider.prev();
+    });
+
+    $('.sol-next').click(function(){
+        solSlider.next();
+    });
 
     /**
      * FAQ custom
@@ -204,6 +250,18 @@ $(document).ready(function(){
 
 
     //*** FORMS ***//
+    $("a[href='#popup-form']").magnificPopup({
+        type: "inline",
+        fixedContentPos: !1,
+        fixedBgPos: !0,
+        overflowY: "auto",
+        closeBtnInside: !0,
+        preloader: !1,
+        midClick: !0,
+        removalDelay: 300,
+        mainClass: "my-mfp-zoom-in",
+    });
+
     var uPhone = $('.user-phone');
     uPhone.mask("(999) 999-99-99",{autoclear: false});
 
@@ -220,21 +278,41 @@ $(document).ready(function(){
 
     $("form").submit(function() { //Change
         var th = $(this);
+        th.find('.btn').prop('disabled','disabled');
 
         $.ajax({
             type: "POST",
             url: "mail.php", //Change
             data: th.serialize()
         }).done(function() {
+            $.magnificPopup.open({
+                items: {
+                    src: '#popup-thanks'
+                },
+                type: 'inline',
 
+                fixedContentPos: false,
+                fixedBgPos: true,
+
+                overflowY: 'auto',
+
+                closeBtnInside: true,
+                preloader: false,
+
+                midClick: true,
+                removalDelay: 300,
+                mainClass: 'my-mfp-zoom-request'
+            }, 0);
+
+            th.find(".btn").removeAttr('disabled');
+            th.trigger("reset");
         });
         return false;
     });
     //** END FORMS **//
 
 
-
-
+    
     /**
      * YA-MAPS
      */
@@ -373,5 +451,225 @@ $(document).ready(function(){
 
     ymap();
 
+
+    $('form .checkbox').styler();
+
+    $('.preloader').fadeOut();
+
+
+    /**
+     * KWIZ FUNCTIONALITY
+     */
+
+    $(function() {
+        $("a.kwiz-call").magnificPopup({
+            type: "inline",
+            fixedContentPos: !1,
+            fixedBgPos: !0,
+            overflowY: "auto",
+            closeBtnInside: !0,
+            preloader: !1,
+            midClick: true,
+            removalDelay: 300,
+            mainClass: "my-mfp-zoom-in",
+            callbacks: {open: initSliders }
+        })
+    });
+
+    function initSliders() {
+        var swiper = new Swiper('.kwiz-slider', {
+            slidesPerView: 3,
+            spaceBetween: 30,
+            speed: 800,
+            scrollbar: {
+                el: '.swiper-scrollbar',
+                draggable: true,
+            },
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            onSlideChangeStart: function(){
+                // on the first slide
+                if (swiper.activeIndex==0) {
+                    $('.swiper-button-prev').hide();
+                    $('.swiper-button-next').show()
+                }
+                // most right postion
+                else if (swiper.activeIndex == swiper.slides.length-1) {
+                    $('.swiper-button-prev').show();
+                    $('.swiper-button-next').hide()
+                }
+                // middle positions
+                else {
+                    $('.swiper-button-prev').show();
+                    $('.swiper-button-next').show()
+                }
+            },
+            breakpoints: {
+                480: {
+                    slidesPerView: 2,
+                    spaceBetween: 15,
+                },
+                768: {
+                    slidesPerView: 3,
+                    spaceBetween: 15,
+                },
+                992: {
+                    slidesPerView: 2,
+                    spaceBetween: 15,
+                },
+            }
+        });
+
+        heightses();
+    };
+
+
+    var step = 1;
+    var steps = $('.kwiz-step').length;
+    var perStep = Math.round(100/steps);
+    var totalPersents = perStep;
+
+    function progressForward(){
+
+        if($('#kwiz-step-'+step).hasClass('last-step')){
+            $('#totalpersents').text('95%');
+            $('.kwiz-progressbar-width').css('width', '95%');
+        } else {
+            $('#totalpersents').text(totalPersents+'%');
+            $('.kwiz-progressbar-width').css('width', totalPersents + '%');
+
+            totalPersents = totalPersents + perStep;
+        }
+    }
+
+
+    $('.kwiz-prev').click(function(){
+       getPrevStep();
+
+        $(this).siblings('button').removeClass('clicked');
+
+        if(!$(this).hasClass('clicked')) {
+            totalPersents = totalPersents - 2 * perStep;
+            $(this).addClass('clicked');
+
+        } else {
+            totalPersents = totalPersents - perStep;
+        }
+
+        $('#totalpersents').text(totalPersents+'%');
+        $('.kwiz-progressbar-width').css('width', totalPersents + '%');
+
+    });
+
+    $('.kwiz-next').click(function(){
+        getNextStep();
+
+        $(this).siblings('button').removeClass('clicked');
+
+        $(this).addClass('clicked');
+        totalPersents = totalPersents + perStep;
+
+        $('#totalpersents').text(totalPersents+'%');
+        $('.kwiz-progressbar-width').css('width', totalPersents + '%');
+
+    });
+
+    function checkNextStep (){
+        if ($('#kwiz-step-'+step).hasClass('chosen')) {
+            $('.kwiz-next').addClass('active').removeAttr('disabled');
+        } else {
+            $('.kwiz-next').removeClass('active').prop('disabled', 'disabled');
+        }
+
+
+    }
+
+
+    function getPrevStep(){
+        console.log('get prev');
+        $('.kwiz-step-' + step).css("display", 'none');
+        step = step - 1;
+        if (step > 1) {
+            $('.kwiz-prev').addClass('active').removeAttr('disabled');
+        } else {
+            $('.kwiz-prev').removeClass('active').prop('disabled', 'disabled');
+        }
+        $('.kwiz-step-'+ step).css('display', 'block');
+
+        checkNextStep();
+    }
+
+
+
+    function getNextStep(){
+        console.log('get next');
+        $('.kwiz-step-' + step).css("display", 'none');
+        step = step + 1;
+        if (step < steps) {
+            $('.kwiz-next').addClass('active').removeAttr('disabled');
+        } else {
+            $('.kwiz-next').removeClass('active').prop('disabled', 'disabled');
+        }
+        $('.kwiz-step-'+ step).css('display', 'block');
+
+        checkNextStep();
+    }
+
+
+    function changeStep(){
+        $('.kwiz-step-'+step+' .kwiz-var').on('click', function () {
+            $(this).addClass('chosen');
+            $(this).siblings('.kwiz-var').css('pointer-events', 'none').removeClass('chosen');
+            $(this).parents('.kwiz-step').addClass("chosen").removeClass('fadeInRight').css('animation-name', 'none');
+
+
+            $('#kwiz-buttons button').removeClass('clicked');
+
+            var value = $(this).data('value');
+            $('#kwiz-ans-'+step).val(value);
+
+            setTimeout(function () {
+                $('.kwiz-step-'+ step).css('opacity', '0');
+                $('.kwiz-step-'+step+' .kwiz-var').css('pointer-events', 'unset');
+            }, 500);
+
+            setTimeout(function () {
+
+                $('.kwiz-step-' + step).css("display", 'none');
+                step = step + 1;
+
+
+
+                //buttons
+                if (step > 1) {
+                    $('.kwiz-prev').addClass('active').removeAttr('disabled');
+                } else {
+                    $('.kwiz-prev').removeClass('active').prop('disabled', 'disabled');
+                }
+
+                if(step == steps) {
+                    $('.kwiz-buttons').hide();
+                    if ($(window).width() < 768) {
+                        $('#kwiz-progress').css('width', '100%');
+                    }
+                } else {
+
+                }
+
+                progressForward();
+
+                changeStep();
+
+                $('.kwiz-step-'+ step).css('display', 'block');
+                initSliders();
+            }, 800);
+        });
+    }
+
+    changeStep();
+
+    new WOW().init();
 
 });

@@ -27,18 +27,34 @@
 </head>
 
 <body>
+<!-- preloader start -->
+<div class="preloader">
+	<div class="sk-cube-grid">
+		<div class="sk-cube sk-cube-1"></div>
+		<div class="sk-cube sk-cube-2"></div>
+		<div class="sk-cube sk-cube-3"></div>
+		<div class="sk-cube sk-cube-4"></div>
+		<div class="sk-cube sk-cube-5"></div>
+		<div class="sk-cube sk-cube-6"></div>
+		<div class="sk-cube sk-cube-7"></div>
+		<div class="sk-cube sk-cube-8"></div>
+		<div class="sk-cube sk-cube-9"></div>
+	</div>
+</div>
+<!-- preloader end -->
+
 <div id="page-container">
 	<!-- mobile-mnu -->
 	<nav id="mobile-mnu" data-logo="img/logo.png">
 		<ul>
-			<li><a href="#0">Акции</a></li>
-			<li><a href="#0">Этапы работы</a></li>
-			<li><a href="#0">Цены</a></li>
-			<li><a href="#0">Готовые решения</a></li>
-			<li><a href="#0">Светильники</a></li>
-			<li><a href="#0">Портфолио</a></li>
-			<li><a href="#0">Вопрос ответ</a></li>
-			<li><a href="#0">Контакты</a></li>
+			<li><a href="#s-sales">Акции</a></li>
+			<li><a href="#s-stages">Этапы работы</a></li>
+			<li><a href="#s-roofs">Цены</a></li>
+			<li><a href="#s-choose">Готовые решения</a></li>
+			<li><a href="#s-solutions">Светильники</a></li>
+			<li><a href="#s-projects">Портфолио</a></li>
+			<li><a href="#s-faq">Вопрос ответ</a></li>
+			<li><a href="#s-contacts">Контакты</a></li>
 		</ul>
 	</nav>
 	<!-- /mobile-mnu -->
@@ -57,14 +73,14 @@
 				<!-- main-mnu -->
 				<nav class="main-mnu">
 					<ul>
-						<li><a href="#0">Акции</a></li>
-						<li><a href="#0">Этапы работы</a></li>
-						<li><a href="#0">Цены</a></li>
-						<li><a href="#0">Готовые решения</a></li>
-						<li><a href="#0">Светильники</a></li>
-						<li><a href="#0">Портфолио</a></li>
-						<li><a href="#0">Вопрос ответ</a></li>
-						<li><a href="#0">Контакты</a></li>
+						<li><a href="#s-sales">Акции</a></li>
+						<li><a href="#s-stages">Этапы работы</a></li>
+						<li><a href="#s-roofs">Цены</a></li>
+						<li><a href="#s-choose">Готовые решения</a></li>
+						<li><a href="#s-solutions">Светильники</a></li>
+						<li><a href="#s-projects">Портфолио</a></li>
+						<li><a href="#s-faq">Вопрос ответ</a></li>
+						<li><a href="#s-contacts">Контакты</a></li>
 					</ul>
 				</nav>
 				<!-- /main-mnu -->
@@ -120,7 +136,7 @@
 				<div class="header-recall">
 					<a href="tel:+74993468107" class="phone">+7-499-346-81-07</a>
 					<div class="btn-block">C 8:00 до 20:00 без выходных</div>
-					<a href="#0" class="btn btn-green">Вызвать замерщика</a>
+					<a href="#popup-form" class="btn btn-green">Вызвать замерщика</a>
 				</div>
 			</div>
 		</section>
@@ -137,18 +153,21 @@
 				</div>
 				<!-- /parallax -->
 				<div class="row">
-					<div class="col-lg-6">
+					<div class="col-lg-6 order-2 order-xl-1">
 						<h2>Спешите проходят акции</h2>
 						<h1>Горячие скидки</h1>
 						<div class="timer-label">До конца акции осталось:</div>
-						<div class="timer"></div>
+						<div class="timer-wrapper">
+							<div class="timer"></div>
+
+						</div>
 					</div>
-					<div class="col-lg-6">
+					<div class="col-lg-6 order-1 order-xl-2">
 						<div class="quest">
 							<h3>Ответьте на 7 простых вопросов и узнайте стоимость своего натяжного потолка</h3>
 							<p>Получите предварительный расчет стоимости <br>
 								+ скидку после прохождения теста</p>
-							<a href="#0" class="btn btn-yellow">Получить предварительный расчет+подарок</a>
+							<a href="#popup-kwiz" class="btn btn-yellow kwiz-call">Получить предварительный расчет+подарок</a>
 						</div>
 					</div>
 				</div>
@@ -207,64 +226,71 @@
 	<!-- ======= HEADER END ======= -->
 
 	<!-- ======= SECTION STAGES START ======= -->
-	<section class="s-start s-bg">
+	<section class="s-stages s-bg" id="s-stages">
 		<div class="container">
 			<h2 class="section-title"><span>Этапы работ</span> при обращении к нам</h2>
 			<div class="stages-wrap">
 				<div class="row">
-					<!-- stage-item -->
-					<div class="col-xl-4 col-lg-4 col-md-6 col-sm-6 stage-item-container">
-						<div class="stage-item">
-							<img src="img/icons/stage-icon-1.svg" alt="alt" class="stage-icon svg">
-							<div class="stage-desc">Вы оставляете нам заявку на сайте или звоните</div>
-						</div>
-					</div>
-					<!-- /stage-item -->
+					<div class="col-xl-10 offset-xl-1">
+						<div class="container">
+							<div class="row">
+								<!-- stage-item -->
+								<div class="col-xl-4 col-lg-4 col-md-6 col-sm-6 col-6 stage-item-container">
+									<div class="stage-item">
+										<img src="img/icons/stage-icon-1.svg" alt="alt" class="stage-icon svg">
+										<div class="stage-desc">Вы оставляете нам заявку на сайте или звоните</div>
+									</div>
+								</div>
+								<!-- /stage-item -->
 
-					<!-- stage-item -->
-					<div class="col-xl-4 col-lg-4 col-md-6 col-sm-6 stage-item-container">
-						<div class="stage-item">
-							<img src="img/icons/stage-icon-2.svg" alt="alt" class="stage-icon svg">
-							<div class="stage-desc">Наш специалист бесплатно выезжает к вам на замер</div>
-						</div>
-					</div>
-					<!-- /stage-item -->
+								<!-- stage-item -->
+								<div class="col-xl-4 col-lg-4 col-md-6 col-sm-6 col-6 stage-item-container">
+									<div class="stage-item">
+										<img src="img/icons/stage-icon-2.svg" alt="alt" class="stage-icon svg">
+										<div class="stage-desc">Наш специалист бесплатно выезжает к вам на замер</div>
+									</div>
+								</div>
+								<!-- /stage-item -->
 
-					<!-- stage-item -->
-					<div class="col-xl-4 col-lg-4 col-md-6 col-sm-6 stage-item-container">
-						<div class="stage-item">
-							<img src="img/icons/stage-icon-3.svg" alt="alt" class="stage-icon svg">
-							<div class="stage-desc">Согласовывает сроки, стоимость и заключает договор</div>
-						</div>
-					</div>
-					<!-- /stage-item -->
+								<!-- stage-item -->
+								<div class="col-xl-4 col-lg-4 col-md-6 col-sm-6 col-6 stage-item-container">
+									<div class="stage-item">
+										<img src="img/icons/stage-icon-3.svg" alt="alt" class="stage-icon svg">
+										<div class="stage-desc">Согласовывает сроки, стоимость и заключает договор</div>
+									</div>
+								</div>
+								<!-- /stage-item -->
 
-					<!-- stage-item -->
-					<div class="col-xl-4 col-lg-4 col-md-6 col-sm-6 stage-item-container">
-						<div class="stage-item">
-							<img src="img/icons/stage-icon-4.svg" alt="alt" class="stage-icon svg">
-							<div class="stage-desc">Вносим предоплату 30% на материалы</div>
-						</div>
-					</div>
-					<!-- /stage-item -->
+								<!-- stage-item -->
+								<div class="col-xl-4 col-lg-4 col-md-6 col-sm-6 col-6 stage-item-container">
+									<div class="stage-item">
+										<img src="img/icons/stage-icon-4.svg" alt="alt" class="stage-icon svg">
+										<div class="stage-desc">Вносим предоплату 30% на материалы</div>
+									</div>
+								</div>
+								<!-- /stage-item -->
 
-					<!-- stage-item -->
-					<div class="col-xl-4 col-lg-4 col-md-6 col-sm-6 stage-item-container">
-						<div class="stage-item">
-							<img src="img/icons/stage-icon-5.svg" alt="alt" class="stage-icon svg">
-							<div class="stage-desc">Мы приступаем к работе а вы - отдыхаете</div>
-						</div>
-					</div>
-					<!-- /stage-item -->
+								<!-- stage-item -->
+								<div class="col-xl-4 col-lg-4 col-md-6 col-sm-6 col-6 stage-item-container">
+									<div class="stage-item">
+										<img src="img/icons/stage-icon-5.svg" alt="alt" class="stage-icon svg">
+										<div class="stage-desc">Мы приступаем к работе а вы - отдыхаете</div>
+									</div>
+								</div>
+								<!-- /stage-item -->
 
-					<!-- stage-item -->
-					<div class="col-xl-4 col-lg-4 col-md-6 col-sm-6 stage-item-container">
-						<div class="stage-item">
-							<img src="img/icons/stage-icon-6.svg" alt="alt" class="stage-icon svg">
-							<div class="stage-desc">По окончании - прием работы, расчет</div>
+								<!-- stage-item -->
+								<div class="col-xl-4 col-lg-4 col-md-6 col-sm-6 col-6 stage-item-container">
+									<div class="stage-item">
+										<img src="img/icons/stage-icon-6.svg" alt="alt" class="stage-icon svg">
+										<div class="stage-desc">По окончании - прием работы, расчет</div>
+									</div>
+								</div>
+								<!-- /stage-item -->
+							</div>
 						</div>
 					</div>
-					<!-- /stage-item -->
+
 				</div>
 			</div>
 		</div>
@@ -272,7 +298,7 @@
 	<!-- ======= SECTION STAGES END ======= -->
 
 	<!-- ======= SECTION CHOOSE START ======= -->
-	<section class="s-choose">
+	<section class="s-choose" id="s-choose">
 		<div class="container">
 			<h2 class="section-title">Выбирайте <span>идеальный потолок</span></h2>
 			<p class="section-text">для вашего дома от надежного производителя Potolok Domoy</p>
@@ -366,7 +392,7 @@
 											</div>
 										</div>
 										<div class="btn-wrap">
-											<a href="#0" class="btn btn-yellow">Вызвать замерщика</a>
+											<a href="#popup-form" class="btn btn-yellow">Вызвать замерщика</a>
 										</div>
 									</div>
 								</div>
@@ -400,7 +426,7 @@
 										</div>
 									</div>
 									<div class="btn-wrap">
-										<a href="#0" class="btn btn-yellow">Вызвать замерщика</a>
+										<a href="#popup-form" class="btn btn-yellow">Вызвать замерщика</a>
 									</div>
 								</div>
 							</div>
@@ -434,7 +460,7 @@
 										</div>
 									</div>
 									<div class="btn-wrap">
-										<a href="#0" class="btn btn-yellow">Вызвать замерщика</a>
+										<a href="#popup-form" class="btn btn-yellow">Вызвать замерщика</a>
 									</div>
 								</div>
 							</div>
@@ -468,7 +494,7 @@
 										</div>
 									</div>
 									<div class="btn-wrap">
-										<a href="#0" class="btn btn-yellow">Вызвать замерщика</a>
+										<a href="#popup-form" class="btn btn-yellow">Вызвать замерщика</a>
 									</div>
 								</div>
 							</div>
@@ -502,7 +528,7 @@
 										</div>
 									</div>
 									<div class="btn-wrap">
-										<a href="#0" class="btn btn-yellow">Вызвать замерщика</a>
+										<a href="#popup-form" class="btn btn-yellow">Вызвать замерщика</a>
 									</div>
 								</div>
 							</div>
@@ -536,7 +562,7 @@
 										</div>
 									</div>
 									<div class="btn-wrap">
-										<a href="#0" class="btn btn-yellow">Вызвать замерщика</a>
+										<a href="#popup-form" class="btn btn-yellow">Вызвать замерщика</a>
 									</div>
 								</div>
 							</div>
@@ -570,7 +596,7 @@
 										</div>
 									</div>
 									<div class="btn-wrap">
-										<a href="#0" class="btn btn-yellow">Вызвать замерщика</a>
+										<a href="#popup-form" class="btn btn-yellow">Вызвать замерщика</a>
 									</div>
 								</div>
 							</div>
@@ -604,7 +630,7 @@
 										</div>
 									</div>
 									<div class="btn-wrap">
-										<a href="#0" class="btn btn-yellow">Вызвать замерщика</a>
+										<a href="#popup-form" class="btn btn-yellow">Вызвать замерщика</a>
 									</div>
 								</div>
 							</div>
@@ -618,121 +644,177 @@
 	<!-- ======= SECTION CHOOSE END ======= -->
 
 	<!-- ======= SECTION CHOOSE START ======= -->
-	<section class="s-roofs">
+	<section class="s-roofs" id="s-roofs">
 		<div class="container">
 			<h2 class="section-title"><span>Качественные натяжные потолки</span><br>от нашей компании</h2>
 			<p class="section-text">Чтобы узнать подробнее о стоимости и акциях, оставьте заявку</p>
-			<div class="roofs-wrap">
-				<div class="row">
-					<!-- roof-item -->
-					<div class="col-lg-4">
-						<div class="roof-item">
-							<div class="roof-item-img" style="background-image: url('img/roof-img-1.jpg');"></div>
-							<div class="roof-item-title">Натяжной потолок в ванной</div>
-								<div class="roof-item-prices">
-									<div class="price-item">
-										<div class="work">Монтаж полотна 5 м2 Монтаж полотна 5 м2</div>
-										<div class="price">1 250 руб.</div>
-									</div>
+			<div class="roofs-wrap roofs-slider owl-carousel">
+				<!-- roof-item -->
+				<div class="roof-item">
+					<div class="roof-item-img" style="background-image: url('img/roof-img-1.jpg');"></div>
+					<div class="roof-item-title">Натяжной потолок в ванной</div>
+					<div class="roof-item-prices">
+						<div class="price-item">
+							<div class="work">Монтаж полотна 5 м2 Монтаж полотна 5 м2</div>
+							<div class="price">1 250 руб.</div>
+						</div>
 
-									<div class="price-item">
-										<div class="work">Монтаж 4 углов</div>
-										<div class="price">1 400 руб.</div>
-									</div>
+						<div class="price-item">
+							<div class="work">Монтаж 4 углов</div>
+							<div class="price">1 400 руб.</div>
+						</div>
 
-									<div class="price-item">
-										<div class="work">Отверстие под вытяжку 1 шт</div>
-										<div class="price">350 руб.</div>
-									</div>
+						<div class="price-item">
+							<div class="work">Отверстие под вытяжку 1 шт</div>
+							<div class="price">350 руб.</div>
+						</div>
 
-									<div class="price-item">
-										<div class="work">Установка 4 светильников</div>
-										<div class="price">1 800 руб.</div>
-									</div>
-								</div>
-							<div class="roof-item-bottom">
-								<div class="total">итого: <span>4800 руб.</span></div>
-								<a href="#0" class="btn btn-roof">Заказать звонок</a>
-							</div>
+						<div class="price-item">
+							<div class="work">Установка 4 светильников</div>
+							<div class="price">1 800 руб.</div>
 						</div>
 					</div>
-					<!-- /roof-item -->
-
-					<!-- roof-item -->
-					<div class="col-lg-4">
-						<div class="roof-item">
-							<div class="roof-item-img" style="background-image: url('img/roof-img-2.jpg');"></div>
-							<div class="roof-item-title">Натяжной потолок в ванной</div>
-								<div class="roof-item-prices">
-									<div class="price-item">
-										<div class="work">Монтаж полотна 5 м2</div>
-										<div class="price">1 250 руб.</div>
-									</div>
-
-									<div class="price-item">
-										<div class="work">Монтаж 4 углов</div>
-										<div class="price">1 400 руб.</div>
-									</div>
-
-									<div class="price-item">
-										<div class="work">Отверстие под вытяжку 1 шт</div>
-										<div class="price">350 руб.</div>
-									</div>
-
-									<div class="price-item">
-										<div class="work">Установка 4 светильников</div>
-										<div class="price">1 800 руб.</div>
-									</div>
-								</div>
-							<div class="roof-item-bottom">
-								<div class="total">итого: <span>4800 руб.</span></div>
-								<a href="#0" class="btn btn-roof">Заказать звонок</a>
-							</div>
-						</div>
+					<div class="roof-item-bottom">
+						<div class="total">итого: <span>4800 руб.</span></div>
+						<a href="#popup-form" class="btn btn-roof">Заказать звонок</a>
 					</div>
-					<!-- /roof-item -->
-
-					<!-- roof-item -->
-					<div class="col-lg-4">
-						<div class="roof-item">
-							<div class="roof-item-img" style="background-image: url('img/roof-img-3.jpg');"></div>
-							<div class="roof-item-title">Натяжной потолок в ванной</div>
-								<div class="roof-item-prices">
-									<div class="price-item">
-										<div class="work">Монтаж полотна 5 м2</div>
-										<div class="price">1 250 руб.</div>
-									</div>
-
-									<div class="price-item">
-										<div class="work">Монтаж 4 углов</div>
-										<div class="price">1 400 руб.</div>
-									</div>
-
-									<div class="price-item">
-										<div class="work">Отверстие под вытяжку 1 шт</div>
-										<div class="price">350 руб.</div>
-									</div>
-
-									<div class="price-item">
-										<div class="work">Установка 4 светильников</div>
-										<div class="price">1 800 руб.</div>
-									</div>
-								</div>
-							<div class="roof-item-bottom">
-								<div class="total">итого: <span>4800 руб.</span></div>
-								<a href="#0" class="btn btn-roof">Заказать звонок</a>
-							</div>
-						</div>
-					</div>
-					<!-- /roof-item -->
 				</div>
+				<!-- /roof-item -->
+
+				<!-- roof-item -->
+				<div class="roof-item">
+					<div class="roof-item-img" style="background-image: url('img/roof-img-2.jpg');"></div>
+					<div class="roof-item-title">Натяжной потолок в ванной</div>
+					<div class="roof-item-prices">
+						<div class="price-item">
+							<div class="work">Монтаж полотна 5 м2</div>
+							<div class="price">1 250 руб.</div>
+						</div>
+
+						<div class="price-item">
+							<div class="work">Монтаж 4 углов</div>
+							<div class="price">1 400 руб.</div>
+						</div>
+
+						<div class="price-item">
+							<div class="work">Отверстие под вытяжку 1 шт</div>
+							<div class="price">350 руб.</div>
+						</div>
+
+						<div class="price-item">
+							<div class="work">Установка 4 светильников</div>
+							<div class="price">1 800 руб.</div>
+						</div>
+					</div>
+					<div class="roof-item-bottom">
+						<div class="total">итого: <span>4800 руб.</span></div>
+						<a href="#popup-form" class="btn btn-roof">Заказать звонок</a>
+					</div>
+				</div>
+				<!-- /roof-item -->
+
+				<!-- roof-item -->
+				<div class="roof-item">
+					<div class="roof-item-img" style="background-image: url('img/roof-img-3.jpg');"></div>
+					<div class="roof-item-title">Натяжной потолок в ванной</div>
+					<div class="roof-item-prices">
+						<div class="price-item">
+							<div class="work">Монтаж полотна 5 м2</div>
+							<div class="price">1 250 руб.</div>
+						</div>
+
+						<div class="price-item">
+							<div class="work">Монтаж 4 углов</div>
+							<div class="price">1 400 руб.</div>
+						</div>
+
+						<div class="price-item">
+							<div class="work">Отверстие под вытяжку 1 шт</div>
+							<div class="price">350 руб.</div>
+						</div>
+
+						<div class="price-item">
+							<div class="work">Установка 4 светильников</div>
+							<div class="price">1 800 руб.</div>
+						</div>
+					</div>
+					<div class="roof-item-bottom">
+						<div class="total">итого: <span>4800 руб.</span></div>
+						<a href="#popup-form" class="btn btn-roof">Заказать звонок</a>
+					</div>
+				</div>
+				<!-- /roof-item -->
+
+				<!-- roof-item -->
+				<div class="roof-item">
+					<div class="roof-item-img" style="background-image: url('img/roof-img-3.jpg');"></div>
+					<div class="roof-item-title">Натяжной потолок в ванной</div>
+					<div class="roof-item-prices">
+						<div class="price-item">
+							<div class="work">Монтаж полотна 5 м2</div>
+							<div class="price">1 250 руб.</div>
+						</div>
+
+						<div class="price-item">
+							<div class="work">Монтаж 4 углов</div>
+							<div class="price">1 400 руб.</div>
+						</div>
+
+						<div class="price-item">
+							<div class="work">Отверстие под вытяжку 1 шт</div>
+							<div class="price">350 руб.</div>
+						</div>
+
+						<div class="price-item">
+							<div class="work">Установка 4 светильников</div>
+							<div class="price">1 800 руб.</div>
+						</div>
+					</div>
+					<div class="roof-item-bottom">
+						<div class="total">итого: <span>4800 руб.</span></div>
+						<a href="#popup-form" class="btn btn-roof">Заказать звонок</a>
+					</div>
+				</div>
+				<!-- /roof-item -->
+
+				<!-- roof-item -->
+				<div class="roof-item">
+					<div class="roof-item-img" style="background-image: url('img/roof-img-3.jpg');"></div>
+					<div class="roof-item-title">Натяжной потолок в ванной</div>
+					<div class="roof-item-prices">
+						<div class="price-item">
+							<div class="work">Монтаж полотна 5 м2</div>
+							<div class="price">1 250 руб.</div>
+						</div>
+
+						<div class="price-item">
+							<div class="work">Монтаж 4 углов</div>
+							<div class="price">1 400 руб.</div>
+						</div>
+
+						<div class="price-item">
+							<div class="work">Отверстие под вытяжку 1 шт</div>
+							<div class="price">350 руб.</div>
+						</div>
+
+						<div class="price-item">
+							<div class="work">Установка 4 светильников</div>
+							<div class="price">1 800 руб.</div>
+						</div>
+					</div>
+					<div class="roof-item-bottom">
+						<div class="total">итого: <span>4800 руб.</span></div>
+						<a href="#popup-form" class="btn btn-roof">Заказать звонок</a>
+					</div>
+				</div>
+				<!-- /roof-item -->
 			</div>
 		</div>
 	</section>
 	<!-- ======= SECTION CHOOSE END ======= -->
 
 	<!-- ======= SECTION SOLUTIONS START ======= -->
-	<section class="s-solutions s-bg">
+	<section class="s-solutions s-bg" id="s-solutions">
 		<div class="container">
 			<h2 class="section-title">
 				<span>Световое решение</span> от нашей компании
@@ -768,19 +850,23 @@
 				<!-- /sol-item -->
 			</div>
 
-<!--			<div class="sol-slider" id="sol-slider">-->
-<!--				<img src="img/sol-img-1.jpg" alt="Image 1" />-->
-<!--				<img src="img/sol-img-2.jpg" alt="Image 2" />-->
-<!--				<img src="img/sol-img-3.jpg" alt="Image 3" />-->
-<!--				<img src="img/sol-img-4.jpg" alt="Image 4" />-->
-<!--				<img src="img/sol-img-5.jpg" alt="Image 5" />-->
-<!--			</div>-->
+			<div class="sol-slider" id="sol-slider">
+				<img src="img/sol-img-1.jpg" alt="Image 1" />
+				<img src="img/sol-img-2.jpg" alt="Image 2" />
+				<img src="img/sol-img-3.jpg" alt="Image 3" />
+				<img src="img/sol-img-4.jpg" alt="Image 4" />
+				<img src="img/sol-img-5.jpg" alt="Image 5" />
+			</div>
+			<div class="sol-slider-nav">
+				<div class="sol-prev"></div>
+				<div class="sol-next"></div>
+			</div>
 		</div>
 	</section>
 	<!-- ======= SECTION SOLUTIONS END ======= -->
 
 	<!-- ======= SECTION PROJECTS START ======= -->
-	<section class="s-projects">
+	<section class="s-projects" id="s-projects">
 		<div class="container">
 			<h2 class="section-title">Наши <span>проекты</span></h2>
 
@@ -944,7 +1030,7 @@
 	<!-- ======= SECTION PROJECTS END ======= -->
 
 	<!-- ======= SECTION FAQ START ======= -->
-	<section class="s-faq s-bg">
+	<section class="s-faq s-bg" id="s-faq">
 		<div class="container">
 			<div class="row">
 				<div class="col-lg-6">
@@ -1191,7 +1277,7 @@
 	<!-- ======= SECTION FAQ END ======= -->
 
 	<!-- ======= SECTION FAQ START ======= -->
-	<section class="s-sales">
+	<section class="s-sales" id="s-sales">
 		<div class="container">
 			<div class="sales-wrap">
 				<div class="row">
@@ -1397,7 +1483,7 @@
 	<!-- ======= SECTION FORM END ======= -->
 
 	<!-- ======= SECTION CONTACTS START ======= -->
-	<section class="s-contacts">
+	<section class="s-contacts" id="s-contacts">
 		<div class="container">
 			<h2 class="section-title">Контакты</h2>
 			<div class="contacts-wrap">
@@ -1429,17 +1515,691 @@
 	</section>
 	<!-- ======= SECTION CONTACTS END ======= -->
 
+	<!-- ======= SECTION FOOTER START ======= -->
+	<footer class="main-foot">
+		<div class="container">
+			<div class="foot-line">
+				<div class="foot-item foot-item-logo">
+					<a href="/">
+						<img src="img/logo.png" alt="alt" class="img-responsive foot-logo">
+					</a>
+					<div>Натяжние потолки. <span>Качество меняет все</span></div>
+				</div>
+				<div class="foot-item foot-item-contacts">
+					<a href="tel:+7499350-56-97" class="phone">+7 499 350-56-97</a>
+					<a href="mailto:hameleon@concept360.ru" class="email">hameleon@concept360.ru</a>
+				</div>
+				<div class="socials foot-item">
+					<!-- soc-item -->
+					<a href="#0" class="soc-item" target="_blank">
+						<img src="img/icons/soc-icon-1.png" alt="alt" class="img-responsive">
+					</a>
+					<!-- soc-/item -->
+
+					<!-- soc-item -->
+					<a href="#0" class="soc-item" target="_blank">
+						<img src="img/icons/soc-icon-2.png" alt="alt" class="img-responsive">
+					</a>
+					<!-- soc-/item -->
+
+					<!-- soc-item -->
+					<a href="#0" class="soc-item" target="_blank">
+						<img src="img/icons/soc-icon-3.png" alt="alt" class="img-responsive">
+					</a>
+					<!-- soc-/item -->
+
+					<!-- soc-item -->
+					<a href="#0" class="soc-item" target="_blank">
+						<img src="img/icons/soc-icon-4.png" alt="alt" class="img-responsive">
+					</a>
+					<!-- soc-/item -->
+
+					<!-- soc-item -->
+					<a href="#0" class="soc-item" target="_blank">
+						<img src="img/icons/soc-icon-5.png" alt="alt" class="img-responsive">
+					</a>
+					<!-- soc-/item -->
+
+					<!-- soc-item -->
+					<a href="#0" class="soc-item" target="_blank">
+						<img src="img/icons/soc-icon-6.png" alt="alt" class="img-responsive">
+					</a>
+					<!-- soc-/item -->
+				</div>
 
 
-
-
-
-
-
-
-
-
+			</div>
+		</div>
+	</footer>
+	<!-- ======= SECTION FOOTER END ======= -->
 </div> <!-- /page-container -->
+
+
+<div class="hidden">
+	<div class="popup-form" id="popup-form">
+		<h1>Бесплатный вызов замерщика!</h1>
+		<p>Оставьте заявку и наш специалист свяжется с вами</p>
+
+		<!-- form start -->
+		<form class="contact-form">
+
+			<!-- Hidden Required Fields -->
+			<input type="hidden" name="project_name" value="Potolok Domoy">
+			<input type="hidden" name="admin_email" value="alexey.kobilianskiy@gmail.com">
+			<input type="hidden" name="form_subject" value="Заявка с сайта Potolok Domoy">
+			<!-- END Hidden Required Fields -->
+			<div class="form-labels-wrap">
+				<label>
+					<span>Имя <i>(поле обязательно для заполнения)</i></span>
+					<input type="text" placeholder="Введите ваше имя" name="Имя" autocomplete="off"
+						   data-validation="custom"
+						   data-validation-regexp="^[a-zA-Zа-яА-Я ]{1,20}$"
+						   data-validation-error-msg="* Укажите ваше имя">
+				</label>
+				<label class="label-phone">
+					<span>Телефон <i>(поле обязательно для заполнения)</i></span>
+					<span class="phone-code">+7</span>
+					<input type="text" class="user-phone" name="Телефон" placeholder="(000) 000 00 00"
+						   autocomplete="off" data-validation="custom"
+						   data-validation-regexp="\([0-9]{3}\)\s[0-9]{3}-[0-9]{2}-[0-9]{2}"
+						   data-validation-error-msg="* Укажите ваш телефон">
+				</label>
+			</div>
+			<button type="submit" class="btn btn-yellow">Получить скидку</button>
+		</form>
+		<!-- form-end -->
+	</div>
+
+	<div class="popup-thanks" id="popup-thanks">
+		<h1>Спасибо!</h1>
+		Мы свяжемся с вами в ближайшее время!
+	</div>
+
+
+
+	<div class="popup-kwiz" id="popup-kwiz">
+		<div class="kwiz-container">
+			<div class="kwiz-content">
+
+				<!-- step 1 -->
+				<div class="kwiz-step kwiz-step-1 wow fadeInRight" id="kwiz-step-1" data-wow-duration=".6s" data-wow-delay=".5s" >
+					<div class="kwiz-quest">Какую фактуру натяжного потолка вы хотите?</div>
+
+					<div class="swiper-container kwiz-slider">
+						<div class="swiper-wrapper">
+							<!-- slide start -->
+							<div class="kwiz-var kwiz-slide slide-type-1 swiper-slide" data-value="Глянцевый">
+								<div class="kwiz-slide-img" style="background-image: url('img/kwiz-step-1-1.jpg');"></div>
+								<div class="kwiz-slide-content">
+									<div class="kwiz-slide-desc">Глянцевый</div>
+								</div>
+								<img src="img/icons/check-icon.svg" alt="alt" class="svg kwiz-slide-check">
+							</div>
+							<!-- slide end -->
+
+							<!-- slide start -->
+							<div class="kwiz-var kwiz-slide slide-type-1 swiper-slide" data-value="Матовый">
+								<div class="kwiz-slide-img" style="background-image: url('img/kwiz-step-1-2.jpg');"></div>
+								<div class="kwiz-slide-content">
+									<div class="kwiz-slide-desc">Матовый</div>
+								</div>
+								<img src="img/icons/check-icon.svg" alt="alt" class="svg kwiz-slide-check">
+							</div>
+							<!-- slide end -->
+
+							<!-- slide start -->
+							<div class="kwiz-var kwiz-slide slide-type-1 swiper-slide" data-value="Сатиновый">
+								<div class="kwiz-slide-img" style="background-image: url('img/kwiz-step-1-3.jpg');"></div>
+								<div class="kwiz-slide-content">
+									<div class="kwiz-slide-desc">Сатиновый</div>
+								</div>
+								<img src="img/icons/check-icon.svg" alt="alt" class="svg kwiz-slide-check">
+							</div>
+							<!-- slide end -->
+
+							<!-- slide start -->
+							<div class="kwiz-var kwiz-slide slide-type-1 swiper-slide" data-value="Тканевый">
+								<div class="kwiz-slide-img" style="background-image: url('img/kwiz-step-1-4.jpg');"></div>
+								<div class="kwiz-slide-content">
+									<div class="kwiz-slide-desc">Тканевый</div>
+								</div>
+								<img src="img/icons/check-icon.svg" alt="alt" class="svg kwiz-slide-check">
+							</div>
+							<!-- slide end -->
+
+							<!-- slide start -->
+							<div class="kwiz-var kwiz-slide slide-type-1 swiper-slide" data-value="Другое">
+								<div class="kwiz-slide-img" style="background-image: url('img/kwiz-step-1-5.jpg');"></div>
+								<div class="kwiz-slide-content">
+									<div class="kwiz-slide-desc">Другое</div>
+								</div>
+								<img src="img/icons/check-icon.svg" alt="alt" class="svg kwiz-slide-check">
+							</div>
+							<!-- slide end -->
+						</div>
+						<div class="swiper-scrollbar"></div>
+						<div class="swiper-button-next"></div>
+						<div class="swiper-button-prev"></div>
+					</div>
+				</div>
+				<!-- /step 1 -->
+
+
+				<!-- step 2 -->
+				<div class="kwiz-step kwiz-step-2 wow fadeInRight" id="kwiz-step-2" data-wow-duration="0.8s" >
+					<div class="kwiz-quest">Какое бы Вы хотели освещение в потолке?</div>
+
+					<div class="swiper-container kwiz-slider">
+						<div class="swiper-wrapper">
+							<!-- slide start -->
+							<div class="kwiz-var kwiz-slide slide-type-1 swiper-slide" data-value="Встраиваемые светильники">
+								<div class="kwiz-slide-img" style="background-image: url('img/kwiz-step-2-1.jpg');"></div>
+								<div class="kwiz-slide-content">
+									<div class="kwiz-slide-desc">Встраиваемые светильники</div>
+								</div>
+								<img src="img/icons/check-icon.svg" alt="alt" class="svg kwiz-slide-check">
+							</div>
+							<!-- slide end -->
+
+							<!-- slide start -->
+							<div class="kwiz-var kwiz-slide slide-type-1 swiper-slide" data-value="Светильники + люстра">
+								<div class="kwiz-slide-img" style="background-image: url('img/kwiz-step-2-2.jpg');"></div>
+								<div class="kwiz-slide-content">
+									<div class="kwiz-slide-desc">Светильники + люстра</div>
+								</div>
+								<img src="img/icons/check-icon.svg" alt="alt" class="svg kwiz-slide-check">
+							</div>
+							<!-- slide end -->
+
+							<!-- slide start -->
+							<div class="kwiz-var kwiz-slide slide-type-1 swiper-slide" data-value="Внутренняя подсветка">
+								<div class="kwiz-slide-img" style="background-image: url('img/kwiz-step-2-3.jpg');"></div>
+								<div class="kwiz-slide-content">
+									<div class="kwiz-slide-desc">Внутренняя подсветка</div>
+								</div>
+								<img src="img/icons/check-icon.svg" alt="alt" class="svg kwiz-slide-check">
+							</div>
+							<!-- slide end -->
+
+							<!-- slide start -->
+							<div class="kwiz-var kwiz-slide slide-type-1 swiper-slide" data-value="Только люстра">
+								<div class="kwiz-slide-img" style="background-image: url('img/kwiz-step-2-4.jpg');"></div>
+								<div class="kwiz-slide-content">
+									<div class="kwiz-slide-desc">Только люстра</div>
+								</div>
+								<img src="img/icons/check-icon.svg" alt="alt" class="svg kwiz-slide-check">
+							</div>
+							<!-- slide end -->
+
+							<!-- slide start -->
+							<div class="kwiz-var kwiz-slide slide-type-1 swiper-slide" data-value="Другое">
+								<div class="kwiz-slide-img" style="background-image: url('img/kwiz-step-1-5.jpg');"></div>
+								<div class="kwiz-slide-content">
+									<div class="kwiz-slide-desc">Другое</div>
+								</div>
+								<img src="img/icons/check-icon.svg" alt="alt" class="svg kwiz-slide-check">
+							</div>
+							<!-- slide end -->
+						</div>
+						<div class="swiper-scrollbar"></div>
+						<div class="swiper-button-next"></div>
+						<div class="swiper-button-prev"></div>
+					</div>
+				</div>
+				<!-- /step 2 -->
+
+				<!-- step 3 -->
+				<div class="kwiz-step kwiz-step-3 wow fadeInRight" id="kwiz-step-3" data-wow-duration="0.8s" >
+					<div class="kwiz-quest">Какого цвета вы хотите натяжной потолок?</div>
+
+					<div class="swiper-container kwiz-slider">
+						<div class="swiper-wrapper">
+							<!-- slide start -->
+							<div class="kwiz-var kwiz-slide slide-type-1 swiper-slide" data-value="Белый">
+								<div class="kwiz-slide-img" style="background-image: url('img/kwiz-step-3-1.jpg');"></div>
+								<div class="kwiz-slide-content">
+									<div class="kwiz-slide-desc">Белый</div>
+								</div>
+								<img src="img/icons/check-icon.svg" alt="alt" class="svg kwiz-slide-check">
+							</div>
+							<!-- slide end -->
+
+							<!-- slide start -->
+							<div class="kwiz-var kwiz-slide slide-type-1 swiper-slide" data-value="Цветной">
+								<div class="kwiz-slide-img" style="background-image: url('img/kwiz-step-3-2.jpg');"></div>
+								<div class="kwiz-slide-content">
+									<div class="kwiz-slide-desc">Цветной</div>
+								</div>
+								<img src="img/icons/check-icon.svg" alt="alt" class="svg kwiz-slide-check">
+							</div>
+							<!-- slide end -->
+
+							<!-- slide start -->
+							<div class="kwiz-var kwiz-slide slide-type-1 swiper-slide" data-value="Фотопечать">
+								<div class="kwiz-slide-img" style="background-image: url('img/kwiz-step-3-3.jpg');"></div>
+								<div class="kwiz-slide-content">
+									<div class="kwiz-slide-desc">Фотопечать</div>
+								</div>
+								<img src="img/icons/check-icon.svg" alt="alt" class="svg kwiz-slide-check">
+							</div>
+							<!-- slide end -->
+
+							<!-- slide start -->
+							<div class="kwiz-var kwiz-slide slide-type-1 swiper-slide" data-value="Другое">
+								<div class="kwiz-slide-img" style="background-image: url('img/kwiz-step-1-5.jpg');"></div>
+								<div class="kwiz-slide-content">
+									<div class="kwiz-slide-desc">Другое</div>
+								</div>
+								<img src="img/icons/check-icon.svg" alt="alt" class="svg kwiz-slide-check">
+							</div>
+							<!-- slide end -->
+						</div>
+						<div class="swiper-scrollbar"></div>
+						<div class="swiper-button-next"></div>
+						<div class="swiper-button-prev"></div>
+					</div>
+				</div>
+				<!-- /step 3 -->
+
+				<!-- step 4 -->
+				<div class="kwiz-step kwiz-step-4 wow fadeInRight" id="kwiz-step-4" data-wow-duration="0.8s" >
+					<div class="kwiz-quest">На сколько помещений нужно будет сделать натяжные потолки?</div>
+
+					<div class="textvars-container">
+						<!-- textvar-item -->
+						<div class="kwiz-var textvar-item" data-value="1">
+							<img src="img/icons/check-icon.svg" alt="alt" class="svg">
+							<span>1</span>
+						</div>
+						<!-- /textvar-item -->
+
+						<!-- textvar-item -->
+						<div class="kwiz-var textvar-item" data-value="2">
+							<img src="img/icons/check-icon.svg" alt="alt" class="svg">
+							<span>2</span>
+						</div>
+						<!-- /textvar-item -->
+
+						<!-- textvar-item -->
+						<div class="kwiz-var textvar-item" data-value="3">
+							<img src="img/icons/check-icon.svg" alt="alt" class="svg">
+							<span>3</span>
+						</div>
+						<!-- /textvar-item -->
+
+						<!-- textvar-item -->
+						<div class="kwiz-var textvar-item" data-value="Пока не определился">
+							<img src="img/icons/check-icon.svg" alt="alt" class="svg">
+							<span>Пока не определился</span>
+						</div>
+						<!-- /textvar-item -->
+					</div>
+				</div>
+				<!-- /step 4 -->
+
+
+				<!-- step 5 -->
+				<div class="kwiz-step kwiz-step-5 wow fadeInRight" id="kwiz-step-5" data-wow-duration="0.8s" >
+					<div class="kwiz-quest">На сколько помещений нужно будет сделать натяжные потолки?</div>
+
+					<div class="textvars-container">
+						<!-- textvar-item -->
+						<div class="kwiz-var textvar-item" data-value="до 10 кв.м." data-value="до 10 кв.м.">
+							<img src="img/icons/check-icon.svg" alt="alt" class="svg">
+							<span>до 10 кв.м.</span>
+						</div>
+						<!-- /textvar-item -->
+
+						<!-- textvar-item -->
+						<div class="kwiz-var textvar-item" data-value="до 20 кв.м." data-value="до 20 кв.м.">
+							<img src="img/icons/check-icon.svg" alt="alt" class="svg">
+							<span>до 20 кв.м.</span>
+						</div>
+						<!-- /textvar-item -->
+
+						<!-- textvar-item -->
+						<div class="kwiz-var textvar-item" data-value="до 30 кв.м." data-value="до 30 кв.м.">
+							<img src="img/icons/check-icon.svg" alt="alt" class="svg">
+							<span>до 30 кв.м.</span>
+						</div>
+						<!-- /textvar-item -->
+
+						<!-- textvar-item -->
+						<div class="kwiz-var textvar-item" data-value="до 40 кв.м." data-value="до 40 кв.м.">
+							<img src="img/icons/check-icon.svg" alt="alt" class="svg">
+							<span>до 40 кв.м.</span>
+						</div>
+						<!-- /textvar-item -->
+
+						<!-- textvar-item -->
+						<div class="kwiz-var textvar-item" data-value="более 40 кв.м." data-value="больше 40 кв.м.">
+							<img src="img/icons/check-icon.svg" alt="alt" class="svg">
+							<span>более 40 кв.м.</span>
+						</div>
+						<!-- /textvar-item -->
+					</div>
+				</div>
+				<!-- /step 5 -->
+
+				<!-- step 6 -->
+				<div class="kwiz-step kwiz-step-6 wow fadeInRight" id="kwiz-step-6" data-wow-duration="0.8s" >
+					<div class="kwiz-quest">Куда планируете установку натяжных потолков?</div>
+
+					<div class="swiper-container kwiz-slider">
+						<div class="swiper-wrapper">
+							<!-- slide start -->
+							<div class="kwiz-var kwiz-slide slide-type-1 swiper-slide" data-value="В квартиру">
+								<div class="kwiz-slide-img" style="background-image: url('img/kwiz-step-6-1.jpg');"></div>
+								<div class="kwiz-slide-content">
+									<div class="kwiz-slide-desc">В квартиру</div>
+								</div>
+								<img src="img/icons/check-icon.svg" alt="alt" class="svg kwiz-slide-check">
+							</div>
+							<!-- slide end -->
+
+							<!-- slide start -->
+							<div class="kwiz-var kwiz-slide slide-type-1 swiper-slide" data-value="В дом / коттедж">
+								<div class="kwiz-slide-img" style="background-image: url('img/kwiz-step-6-2.jpg');"></div>
+								<div class="kwiz-slide-content">
+									<div class="kwiz-slide-desc">В дом / коттедж</div>
+								</div>
+								<img src="img/icons/check-icon.svg" alt="alt" class="svg kwiz-slide-check">
+							</div>
+							<!-- slide end -->
+
+							<!-- slide start -->
+							<div class="kwiz-var kwiz-slide slide-type-1 swiper-slide" data-value="В коммерческое помещение">
+								<div class="kwiz-slide-img" style="background-image: url('img/kwiz-step-6-3.jpg');"></div>
+								<div class="kwiz-slide-content">
+									<div class="kwiz-slide-desc">В коммерческое помещение</div>
+								</div>
+								<img src="img/icons/check-icon.svg" alt="alt" class="svg kwiz-slide-check">
+							</div>
+							<!-- slide end -->
+
+							<!-- slide start -->
+							<div class="kwiz-var kwiz-slide slide-type-1 swiper-slide" data-value="Другое">
+								<div class="kwiz-slide-img" style="background-image: url('img/kwiz-step-1-5.jpg');"></div>
+								<div class="kwiz-slide-content">
+									<div class="kwiz-slide-desc">Другое</div>
+								</div>
+								<img src="img/icons/check-icon.svg" alt="alt" class="svg kwiz-slide-check">
+							</div>
+							<!-- slide end -->
+						</div>
+						<div class="swiper-scrollbar"></div>
+						<div class="swiper-button-next"></div>
+						<div class="swiper-button-prev"></div>
+					</div>
+				</div>
+				<!-- /step 6 -->
+
+				<!-- step 7 -->
+				<div class="kwiz-step kwiz-step-7 wow fadeInRight" id="kwiz-step-7" data-wow-duration="0.8s" >
+					<div class="kwiz-quest">Когда планируете сделать натяжной потолок?</div>
+
+					<div class="textvars-container">
+						<!-- textvar-item -->
+						<div class="kwiz-var textvar-item" data-value="Срочно">
+							<img src="img/icons/check-icon.svg" alt="alt" class="svg">
+							<span>Срочно</span>
+						</div>
+						<!-- /textvar-item -->
+
+						<!-- textvar-item -->
+						<div class="kwiz-var textvar-item" data-value="В течение недели">
+							<img src="img/icons/check-icon.svg" alt="alt" class="svg">
+							<span>В течение недели</span>
+						</div>
+						<!-- /textvar-item -->
+
+						<!-- textvar-item -->
+						<div class="kwiz-var textvar-item" data-value="В течение месяца">
+							<img src="img/icons/check-icon.svg" alt="alt" class="svg">
+							<span>В течение месяца</span>
+						</div>
+						<!-- /textvar-item -->
+
+						<!-- textvar-item -->
+						<div class="kwiz-var textvar-item" data-value="В течение 3 месяцев">
+							<img src="img/icons/check-icon.svg" alt="alt" class="svg">
+							<span>В течение 3 месяцев</span>
+						</div>
+						<!-- /textvar-item -->
+
+						<!-- textvar-item -->
+						<div class="kwiz-var textvar-item" data-value="Пока не определился">
+							<img src="img/icons/check-icon.svg" alt="alt" class="svg">
+							<span>Пока не определился</span>
+						</div>
+						<!-- /textvar-item -->
+					</div>
+				</div>
+				<!-- /step 7 -->
+
+
+				<!-- step 8 -->
+				<div class="kwiz-step kwiz-step-8 wow fadeInRight" id="kwiz-step-8" data-wow-duration="0.8s" >
+					<div class="kwiz-quest">Какого цвета вы хотите натяжной потолок?</div>
+
+					<div class="swiper-container kwiz-slider">
+						<div class="swiper-wrapper">
+							<!-- slide start -->
+							<div class="kwiz-var kwiz-slide slide-type-2 swiper-slide" data-value="Скидка 20% на всю квартиру">
+								<div class="kwiz-slide-img" style="background-image: url('img/bg-slide-t2.png');">
+									<div class="kwiz-slide-sale"><span>Скидка 20%</span></div>
+									<div class="kwiz-slide-notice">Оставьте заявку на бесплатный <br> замер потолка</div>
+								</div>
+								<div class="kwiz-slide-content">
+									<div class="kwiz-slide-desc">Скидка 20%</div>
+									<div class="kwiz-slide-underdesc">на всю квартиру!</div>
+								</div>
+								<img src="img/icons/check-icon.svg" alt="alt" class="svg kwiz-slide-check">
+							</div>
+							<!-- slide end -->
+
+							<!-- slide start -->
+							<div class="kwiz-var kwiz-slide slide-type-2 swiper-slide" data-value="Скидка 20% на всю квартиру">
+								<div class="kwiz-slide-img" style="background-image: url('img/bg-slide-t2.png');">
+									<div class="kwiz-slide-sale"><span>Скидка 20%</span> на всю крватиру!</div>
+									<div class="kwiz-slide-notice">Оставьте заявку на бесплатный <br> замер потолка</div>
+								</div>
+								<div class="kwiz-slide-content">
+									<div class="kwiz-slide-desc">Скидка 20%</div>
+									<div class="kwiz-slide-underdesc">на всю квартиру!</div>
+								</div>
+								<img src="img/icons/check-icon.svg" alt="alt" class="svg kwiz-slide-check">
+							</div>
+							<!-- slide end -->
+
+							<!-- slide start -->
+							<div class="kwiz-var kwiz-slide slide-type-2 swiper-slide" data-value="Скидка 20% на всю квартиру">
+								<div class="kwiz-slide-img" style="background-image: url('img/bg-slide-t2.png');">
+									<div class="kwiz-slide-sale"><span>Скидка 20%</span> на всю крватиру!</div>
+									<div class="kwiz-slide-notice">Оставьте заявку на бесплатный <br> замер потолка</div>
+								</div>
+								<div class="kwiz-slide-content">
+									<div class="kwiz-slide-desc">Скидка 20%</div>
+									<div class="kwiz-slide-underdesc">на всю квартиру!</div>
+								</div>
+								<img src="img/icons/check-icon.svg" alt="alt" class="svg kwiz-slide-check">
+							</div>
+							<!-- slide end -->
+
+							<!-- slide start -->
+							<div class="kwiz-var kwiz-slide slide-type-2 swiper-slide" data-value="Скидка 20% на всю квартиру">
+								<div class="kwiz-slide-img" style="background-image: url('img/bg-slide-t2.png');">
+									<div class="kwiz-slide-sale"><span>Скидка 20%</span> на всю крватиру!</div>
+									<div class="kwiz-slide-notice">Оставьте заявку на бесплатный <br> замер потолка</div>
+								</div>
+								<div class="kwiz-slide-content">
+									<div class="kwiz-slide-desc">Скидка 20%</div>
+									<div class="kwiz-slide-underdesc">на всю квартиру!</div>
+								</div>
+								<img src="img/icons/check-icon.svg" alt="alt" class="svg kwiz-slide-check">
+							</div>
+							<!-- slide end -->
+						</div>
+						<div class="swiper-scrollbar"></div>
+						<div class="swiper-button-next"></div>
+						<div class="swiper-button-prev"></div>
+					</div>
+				</div>
+				<!-- /step 8 -->
+
+				<!-- last -->
+				<div class="kwiz-step kwiz-step-9 last-step wow fadeIn" id="kwiz-step-9" data-wow-duration="0.8s" >
+					<div class="kwiz-quest">Мы благодарны Вам за Ваши ответы, потому что они экономят время для расчетов</div>
+
+					<!-- form start -->
+					<form class="contact-form">
+						<p>Укажите свои данные и получите предварительный расчет на свой e-mail</p>
+
+						<!-- Hidden Required Fields -->
+						<input type="hidden" name="project_name" value="Potolok Domoy">
+						<input type="hidden" name="admin_email" value="alexey.kobilianskiy@gmail.com">
+						<input type="hidden" name="form_subject" value="Заявка с сайта Potolok Domoy">
+						<!-- END Hidden Required Fields -->
+
+						<input type="hidden" name="Форма" value="Квиз-форма">
+						<input type="hidden" name="Фактура потолка" id="kwiz-ans-1">
+						<input type="hidden" name="Освещение на потолке" id="kwiz-ans-2">
+						<input type="hidden" name="Цвет потолка" id="kwiz-ans-3">
+						<input type="hidden" name="Количество помещений" id="kwiz-ans-4">
+						<input type="hidden" name='Площадь помещений' id="kwiz-ans-5">
+						<input type="hidden" name="Куда устанавливать" id="kwiz-ans-6">
+						<input type="hidden" name="Когда делать" id="kwiz-ans-7">
+						<input type="hidden" name="Скидка" id="kwiz-ans-8">
+
+
+
+
+						<div class="form-labels-wrap">
+							<label>
+								<input type="text" data-validation-error-msg="* Укажите корректный email" name="email" placeholder="Введите ваш e-mail" autocomplete="off">
+							</label>
+
+							<label class="label-phone">
+								<span>Телефон <i>(поле обязательно для заполнения)</i></span>
+								<span class="phone-code">+7</span>
+								<input type="text" class="user-phone" name="Телефон" placeholder="(000) 000 00 00"
+									   autocomplete="off" data-validation="custom"
+									   data-validation-regexp="\([0-9]{3}\)\s[0-9]{3}-[0-9]{2}-[0-9]{2}"
+									   data-validation-error-msg="* Укажите ваш телефон">
+							</label>
+
+							<label>
+								<span>Имя <i>(поле обязательно для заполнения)</i></span>
+								<input type="text" placeholder="Введите ваше имя" name="Имя" autocomplete="off"
+									   data-validation="custom"
+									   data-validation-regexp="^[a-zA-Zа-яА-Я ]{1,20}$"
+									   data-validation-error-msg="* Укажите ваше имя">
+							</label>
+						</div>
+						<button type="submit" class="btn btn-yellow"><img src="img/icons/check-icon.svg" alt="alt" class="svg">Последний шаг</button>
+						<label class="form-privacy">
+							<input type="checkbox" id="checkbox" class="checkbox" checked name="agreement" required><a href="#0" target="_blank">С политикой конфиденциальности ознакомлен</a>
+						</label>
+					</form>
+					<!-- form-end -->
+				</div>
+				<!-- last -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+			</div>
+			<div class="kwiz-static">
+				<div class="kwiz-quest"></div>
+				<div class="kwiz-static-wrap">
+					<div>
+						<img src="img/logo.png" alt="alt" class="logo img-responsive">
+						<h3>Натяжные потолки.</h3>
+						<p>Качество меняет все.</p>
+					</div>
+					<div class="kwiz-buttons">
+						<div class="btn kwiz-prev"><img src="img/icons/kwiz-btn-arrow.svg" alt="alt" class="svg"></div>
+						<div class="btn kwiz-next btn-yellow">Далее <img src="img/icons/kwiz-btn-arrow.svg" alt="alt" class="svg"></div>
+					</div>
+				</div>
+
+			</div>
+
+
+			<div id="kwiz-progress" class="kwiz-progress">
+				<div class="kwiz-progress-title">Готово: <span id="totalpersents">0%</span></div>
+				<div class="kwiz-progressbar">
+					<div class="kwiz-progressbar-width"></div>
+				</div>
+			</div>
+
+
+			<div class="kwiz-buttons kwiz-buttons-mobile" id="kwiz-buttons">
+				<div class="btn kwiz-prev"><img src="img/icons/kwiz-btn-arrow.svg" alt="alt" class="svg"></div>
+				<div class="btn kwiz-next btn-yellow">Далее <img src="img/icons/kwiz-btn-arrow.svg" alt="alt" class="svg"></div>
+<!--				<button  class="btn kwiz-prev" disabled id="#kwiz-prev"><img src="img/icons/kwiz-btn-arrow.svg" alt="alt" class="svg"></button>-->
+<!--				<button class="btn kwiz-next btn-yellow" disabled id="#kwiz-next">Далее <img src="img/icons/kwiz-btn-arrow.svg" alt="alt" class="svg"></button>-->
+			</div>
+		</div>
+	</div>
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 <!-- ======= HTML FOR PHOTOSWIPE ======= -->

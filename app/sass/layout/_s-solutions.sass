@@ -1,3 +1,7 @@
+.s-solutions
+  .container
+    position: relative
+
 .sol-wrap
   margin-top: 75px
   display: flex
@@ -25,3 +29,31 @@
   img
     width: 330px
     cursor: pointer
+
+.sol-slider-nav
+  position: absolute
+  bottom: 200px
+  width: 100%
+  z-index: 100
+  left: 0
+  .sol-prev, .sol-next
+    height: 68px
+    width: 68px
+    background-color: #fff
+    border-radius: 50%
+    background-image: url('../img/icons/slider-arrow.png')
+    background-repeat: no-repeat
+    background-position: center center
+    background-size: 41px 41px
+    +mt(.3s)
+    opacity: .6
+    cursor: pointer
+    position: absolute
+    box-shadow: 0 0 10px 4px rgba(#000, .15)
+    &:hover
+      opacity: .8
+  .sol-prev
+    transform: rotate(180deg)
+    left: 17px
+  .sol-next
+    right: 17px

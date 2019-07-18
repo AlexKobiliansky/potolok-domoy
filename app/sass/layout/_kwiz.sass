@@ -1,0 +1,332 @@
+.popup-kwiz
+  display: block
+  background-color: #fff
+  background-image: url('../img/bg-popup.png')
+  +bg-cover
+  width: 100%
+  max-width: 1100px
+  margin-left: auto
+  margin-right: auto
+  padding: 25px 30px 35px
+  position: relative
+
+
+
+
+.kwiz-container
+  display: flex
+  justify-content: space-between
+  position: relative
+
+.kwiz-content
+  width: calc(100% - 280px)
+
+.kwiz-progress
+  width: calc(100% - 300px)
+  position: absolute
+  left: 0
+  bottom: 0
+  text-align: center
+  font-size: 9px
+  font-weight: 600
+  &-title
+    line-height: 1
+    margin-bottom: 6px
+    span
+      color: $accent
+
+.kwiz-progressbar
+  width: 100%
+  height: 10px
+  position: relative
+  background-color: #d7dcdf
+  border-radius: 4px
+  &-width
+    position: absolute
+    left: 0
+    top: 0
+    height: 10px
+    background-color: $accent
+    width: 0
+    border-radius: 4px
+    transition: all 1.3s linear
+
+
+.kwiz-quest
+  font-size: 30px
+  font-weight: 600
+  margin-bottom: 16px
+  text-align: center
+
+.kwiz-slider-wrap
+  margin-right: 30px
+
+.kwiz-slider
+  padding: 0 10px 22px
+  margin-bottom: 55px
+  left: -10px
+
+.kwiz-slide
+  position: relative
+  border-radius: 10px
+  overflow: hidden
+  border: 1px solid #fff
+  box-shadow: 0 0 10px 2px rgba(#000 , .1)
+  margin: 10px 0
+  cursor: pointer
+  +mt(.3s)
+  &-img
+    +bg-cover
+    height: 245px
+  &-content
+    background-color: #fff
+    font-size: 16px
+    padding: 30px 14px 25px
+  &-desc
+    border-bottom: 2px solid #dbdbdb
+    padding-bottom: 6px
+    display: flex
+    align-items: flex-end
+  &.chosen
+    .svg
+      opacity: 1
+      border-color: $accent
+  &:hover
+    border-color: $accent
+  &.slide-type-2
+    .kwiz-slide-img
+      background-size: 160px auto
+      background-position: calc(100% - 10px) bottom
+      background-color: #fff
+      padding: 20px 10px 0
+    .kwiz-slide-sale
+      font-weight: 800
+      font-size: 20px
+      line-height: 1
+      margin-bottom: 15px
+      span
+        font-size: 30px
+        color: $accent
+        display: block
+        margin-bottom: 4px
+    .kwiz-slide-notice
+      font-size: 10px
+    .kwiz-slide-content
+      padding-top: 40px
+      padding-bottom: 10px
+    .kwiz-slide-desc
+      padding-bottom: 0
+
+.kwiz-slide-check
+  fill: $accent
+  width: 55px
+  height: auto
+  position: absolute
+  right: 15px
+  top: 15px
+  opacity: 0
+  +mt(.7s)
+
+.swiper-scrollbar
+  background-color: #ced4db
+  width: calc(100% - 20px)
+  left: 10px
+  height: 5px
+  border-radius: 4px
+
+.swiper-scrollbar-drag
+  background-color: $accent
+  cursor: pointer
+  border-radius: 4px
+
+.swiper-button-next, .swiper-button-prev
+  width: 40px
+  height: 40px
+  background-image: url('../img/icons/kwiz-nav-arrow.png')
+  +bg-cover
+  +mt(.3s)
+  &.swiper-button-disabled
+    opacity: 0
+
+.swiper-button-prev
+  transform: rotate(180deg)
+
+
+
+.kwiz-static
+  width: 270px
+  display: flex
+  flex-direction: column
+  &-wrap
+    background-color: #fff
+    flex-grow: 2
+    box-shadow: 0 0 10px 2px rgba(#000 , .1)
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+    padding: 25px 15px 35px
+    text-align: center
+    line-height: 1
+  .kwiz-quest
+    margin-bottom: 26px
+  .logo
+    margin: 0 auto 12px
+  h3
+    font-size: 18px
+    text-transform: uppercase
+    margin-bottom: 5px
+  p
+    font-size: 18px
+    font-weight: 600
+
+.kwiz-buttons
+  display: flex
+  justify-content: space-between
+  .btn
+    width: calc(50% - 2px)
+    padding: 12px
+    border-radius: 5px
+    cursor: not-allowed
+    pointer-events: none
+    &.active
+      cursor: pointer
+      pointer-events: unset
+  .btn-yellow
+    font-size: 16px
+    font-weight: 600
+    .svg
+      width: 24px
+      height: auto
+      margin-left: 5px
+    &:hover
+      background-image: linear-gradient(to bottom,  #fdcf20 50%,  #faa31b 100%)
+    &.active
+      &:hover
+        background-image: linear-gradient(to bottom,  #faa31b 50%,  #fdcf20 100%)
+  .kwiz-prev
+    border: 1px solid #fcb612
+    .svg
+      width: 37px
+      height: auto
+      fill: #fedc8e
+      transform: rotate(180deg)
+
+
+.kwiz-buttons
+  .svg
+    width: 10px
+    height: auto
+
+.kwiz-buttons-mobile
+  position: absolute
+  right: 10px
+  bottom: 0
+  top: auto
+  width: 220px
+  display: none
+
+
+.kwiz-step
+  display: none
+  transition: opacity .5s ease
+  opacity: 1
+  &-1
+    display: block
+
+
+.wow
+  visibility: hidden
+
+.textvars-container
+  display: flex
+  flex-wrap: wrap
+  justify-content: space-between
+  margin-right: 15px
+  height: 371px
+  align-items: flex-start
+  align-content: flex-start
+  margin-top: 25px
+
+.textvar-item
+  width: calc(50% - 15px)
+  font-size: 22px
+  +mt(.3s)
+  background-color: #fff
+  border: 1px solid #acacac
+  border-radius: 10px
+  line-height: 1
+  padding: 12px 20px 10px
+  margin-bottom: 30px
+  cursor: pointer
+  height: auto
+  display: flex
+  .svg
+    margin-right: 12px
+    width: 29px
+    height: auto
+    +mt(.7s)
+    fill: #bbb
+  span
+    width: calc(100% - 29px)
+  &:hover
+    border-color: $accent
+  &.chosen
+    border-color: $accent
+    color: $accent
+    .svg
+      fill: $accent
+
+
+.kwiz-step .contact-form
+  margin-right: 15px
+  .form-labels-wrap
+    margin-top: 43px
+    margin-bottom: 38px
+    label
+      margin-bottom: 15px
+      span
+        font-size: 14px
+    input
+      padding: 15px 25px
+    .phone-code
+      padding-top: 15px
+      padding-bottom: 15px
+      font-size: 14px
+  .form-privacy
+    margin: 15px 0 25px
+    padding-bottom: 25px
+  .btn
+    .svg
+      fill: $accent
+      width: 26px
+      height: auto
+      margin-right: 5px
+
+.form-privacy
+  font-size: 9px
+  text-decoration: underline
+  &:hover
+    text-decoration: none
+    color: $accent
+
+.jq-checkbox
+  background: #fcb612
+  border: none!important
+  &.has-error
+    background: $accent!important
+
+
+.jq-checkbox.checked .jq-checkbox__div
+  position: relative
+  left: 2px
+  top: 1px
+  z-index: 100
+
+.jq-checkbox
+  .jq-checkbox__div
+    left: 14px
+
+.wow
+  opacity: 1!important
+
+

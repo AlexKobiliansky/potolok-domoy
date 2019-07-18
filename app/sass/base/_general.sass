@@ -179,6 +179,9 @@ h1, h2
   &.bottom
     bottom: 55px
 
+.timer-wrapper
+  cursor: pointer
+
 .timer
   width: 322px
   background-color: #fff
@@ -188,6 +191,7 @@ h1, h2
   padding-right: 18px
   height: 80px
   margin-left: 0
+  cursor: pointer
 
 .flip-clock-wrapper ul li a div
   line-height: 1
@@ -217,6 +221,9 @@ h1, h2
 
 .flip-clock-wrapper ul li a div.up
   top: 10px
+
+.flip-clock-wrapper ul li a div .shadow
+  cursor: pointer
 //end timer
 
 
@@ -306,6 +313,146 @@ form
   width: 50px
   margin-right: 10px
   text-align: center
+
+
+.popup-form, .popup-thanks
+  width: 100%
+  min-width: 320px
+  max-width: 555px
+  background-image: url('../img/bg-popup.png')
+  +bg-cover
+  background-color: #fff
+  margin-left: auto
+  margin-right: auto
+  padding: 50px 35px 75px
+  position: relative
+  h1
+    font-size: 40px
+    margin-bottom: 15px
+    line-height: 1
+    text-align: center
+    color: $accent
+    text-transform: uppercase
+  p
+    font-size: 18px
+    text-align: center
+  form
+    margin-top: 35px
+    padding-left: 45px
+    padding-right: 45px
+    font-size: 16px
+    input, .phone-code
+      font-size: 16px
+
+.popup-thanks
+  margin-top: 30px
+  padding-top: 80px
+  padding-bottom: 80px
+  text-align: center
+  font-size: 20px
+  h1
+    margin-bottom: 40px
+
+
+//MY_MFP_ZOOM_IN
+.my-mfp-zoom-in
+  .zoom-anim-dialog, .popup-form, .video-popup, .popup-privacy, .popup-kwiz
+    opacity: 0
+    transition: all 0.5s ease-in-out
+    transform: scale(0.7)
+  &.mfp-ready .zoom-anim-dialog, &.mfp-ready .popup-form, &.mfp-ready .video-popup, &.mfp-ready .popup-privacy, &.mfp-ready .popup-kwiz
+    opacity: 1
+    transform: scale(1)
+  &.mfp-removing .zoom-anim-dialog, &.mfp-removing .popup-form, &.mfp-removing .video-popup, &.mfp-removing .popup-privacy, &.mfp-removing .popup-kwiz
+    transform: scale(0.7)
+    opacity: 0
+  &.mfp-bg
+    opacity: 0
+    transition: opacity 0.5s ease-out
+  &.mfp-ready.mfp-bg
+    opacity: .9
+  &.mfp-removing.mfp-bg
+    opacity: 0
+
+.mfp-close-btn-in .mfp-close
+  color: #fff
+  right: -11px
+  top: -45px
+  font-size: 40px
+
+
+
+//preloader
+.preloader
+  position: fixed
+  top: 0
+  right: 0
+  bottom: 0
+  left: 0
+  width: 100%
+  height: 100%
+  z-index: 10000
+  display: flex
+  justify-content: center
+  align-items: center
+  background-color: #f6f6f6
+
+.sk-cube-grid
+  width: 7em
+  height: 7em
+  margin: auto
+
+.sk-cube-grid .sk-cube
+  width: 33%
+  height: 33%
+  background-color: $accent
+  float: left
+  animation: sk-cube-grid-scale-delay 1.3s infinite ease-in-out
+
+.sk-cube-grid .sk-cube-1
+  animation-delay: 0.2s
+
+.sk-cube-grid .sk-cube-2
+  animation-delay: 0.3s
+
+.sk-cube-grid .sk-cube-3
+  animation-delay: 0.4s
+
+.sk-cube-grid .sk-cube-4
+  animation-delay: 0.1s
+
+.sk-cube-grid .sk-cube-5
+  animation-delay: 0.2s
+
+.sk-cube-grid .sk-cube-6
+  animation-delay: 0.3s
+
+.sk-cube-grid .sk-cube-7
+  animation-delay: 0s
+
+.sk-cube-grid .sk-cube-8
+  animation-delay: 0.1s
+
+.sk-cube-grid .sk-cube-9
+  animation-delay: 0.2s
+
+
+@-webkit-keyframes sk-cube-grid-scale-delay
+  0%, 70%, 100%
+    transform: scale3D(1, 1, 1)
+
+  35%
+    transform: scale3D(0, 0, 1)
+
+
+
+@keyframes sk-cube-grid-scale-delay
+  0%, 70%, 100%
+    transform: scale3D(1, 1, 1)
+
+  35%
+    transform: scale3D(0, 0, 1)
+//end preloader
 
 
 
