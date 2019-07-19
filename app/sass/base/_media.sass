@@ -6,6 +6,10 @@
 // ≥1200px
 +media-breakpoint-down(lg)
 
+  .sales-slider
+    .owl-nav.disabled
+      display: block
+
   .kwiz-slide.slide-type-2
     .kwiz-slide-sale
       font-size: 18px
@@ -23,7 +27,7 @@
 
   .sales-notice
     font-size: 18px
-    padding: 12px
+    padding: 12px 70px
 
   .project-img
     margin-right: 10px
@@ -74,6 +78,14 @@
 
 // ≥992px
 +media-breakpoint-down(md)
+
+  .sales-slider
+    .owl-nav
+      bottom: 0
+      button.owl-next, button.owl-prev
+        width: 50px
+        height: 50px
+        background-size: 30px
 
   .textvars-container
     height: 400px
@@ -205,6 +217,14 @@
 // ≥768px
 +media-breakpoint-down(sm)
 
+  .sales-notice
+    font-size: 16px
+
+  .sales-slider
+    .owl-nav
+      bottom: -8px
+
+
   .faq-wrap
     margin-top: 20px
 
@@ -312,6 +332,16 @@
 
 // ≥480px
 +media-breakpoint-down(xs)
+
+  .sales-slider .owl-nav
+    bottom: -4px
+
+  .sales-notice
+    padding-top: 15px
+    padding-bottom: 15px
+
+  .s-sales
+    padding-top: 30px
 
   .quest
     height: 280px

@@ -138,6 +138,30 @@ $(document).ready(function(){
         }
     });
 
+    $('.sales-slider').owlCarousel({
+        loop:true,
+        nav: true,
+        items: 4,
+        margin: 30,
+        dots: false,
+        navText: ["",""],
+        responsive: {
+            0: {
+                items: 1
+            },
+            768: {
+                items: 2
+            },
+            992: {
+                items: 3,
+            },
+            1200: {
+                items: 4,
+                mouseDrag: false
+            }
+        }
+    });
+
 
     //*** equal heights ***//
     function heightses() {
@@ -339,8 +363,6 @@ $(document).ready(function(){
         return false;
     });
     //** END FORMS **//
-
-
 
     /**
      * YA-MAPS
@@ -611,8 +633,6 @@ $(document).ready(function(){
         } else {
             $('.kwiz-next').removeClass('active').prop('disabled', 'disabled');
         }
-
-
     }
 
 
@@ -646,7 +666,6 @@ $(document).ready(function(){
         checkNextStep();
     }
 
-
     function changeStep(){
         $('.kwiz-step-'+step+' .kwiz-var').on('click', function () {
             $(this).addClass('chosen');
@@ -668,8 +687,6 @@ $(document).ready(function(){
 
                 $('.kwiz-step-' + step).css("display", 'none');
                 step = step + 1;
-
-
 
                 //buttons
                 if (step > 1) {
