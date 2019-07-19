@@ -39,6 +39,7 @@ gulp.task('styles', function() {
 gulp.task('scripts', function() {
 	return gulp.src([
 		'app/libs/jquery/dist/jquery.min.js',
+		'app/libs/jquery/dist/jquery-mobile.min.js',
 		'app/libs/mmenu/jquery.mmenu.all.js',
 		'app/libs/flipclock/flipclock.min.js',
 		'app/libs/parallax-img/parallax-img.js',

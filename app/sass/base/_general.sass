@@ -285,9 +285,14 @@ form
         &::placeholder
           color: red
     &.label-phone
-      input
+      input, .ui-input-text
         display: inline-block
         width: calc(100% - 66px)
+      input
+        width: 100%
+      .ui-input-text
+        position: relative
+        top: 1px
     span
       display: block
       font-size: 9px
@@ -453,6 +458,12 @@ form
   35%
     transform: scale3D(0, 0, 1)
 //end preloader
+
+.ui-loader
+  display: none
+
+.mm-menu_offcanvas.mm-menu_opened
+  z-index: 1000
 
 
 
